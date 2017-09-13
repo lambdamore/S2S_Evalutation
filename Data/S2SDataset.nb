@@ -1,19 +1,12 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 11.1' *)
-
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[    263699,       4658]
-NotebookOptionsPosition[    258495,       4522]
-NotebookOutlinePosition[    259486,       4556]
-CellTagsIndexPosition[    259406,       4551]
+NotebookDataPosition[         0,          0]
+NotebookDataLength[    267302,       4728]
+NotebookOptionsPosition[    260573,       4553]
+NotebookOutlinePosition[    261564,       4587]
+CellTagsIndexPosition[    261484,       4582]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4088,67 +4081,7 @@ com/tiff/1.0/> <exif:PixelYDimension>1352</exif:PixelYDimension> \
   DefaultBaseStyle->"ImageGraphics",
   ImageSizeRaw->{1352, 792},
   PlotRange->{{0, 1352}, {0, 792}}]], "Input",ExpressionUUID->"3da5841b-88fe-\
-4ef7-899a-34dbb69d1254"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"S2SAttributions", "=", 
-   RowBox[{"{", "\n", 
-    RowBox[{"(*", 
-     RowBox[{"{", 
-      RowBox[{"dataset", ",", "origin", ",", "steps", ",", "ensemblenumber"}],
-       "}"}], "*)"}], "\n", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<BoM\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<CMA\>\"", ",", "\"\<babj\>\"", ",", "\"\<24/to/1440/by/24\>\"", 
-       ",", "\"\<1/to/3\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<ECCC\>\"", ",", "\"\<cwao\>\"", ",", "\"\<24/to/768/by/24\>\"", 
-       ",", "\"\<1/to/20\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<ECMWF\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<HMCR\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<CNRISAC\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"",
-        ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<JMA\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<KMA\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<CNRM\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<NCEP\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}], ",", "\n", 
-     RowBox[{"{", 
-      RowBox[{
-      "\"\<UKMO\>\"", ",", "\"\<ammc\>\"", ",", "\"\<24/to/1488/by/24\>\"", 
-       ",", "\"\<1/to/32\>\""}], "}"}]}], "}"}]}], ";"}]], "Code",
- CellChangeTimes->{{3.7142450973356953`*^9, 3.7142451741732597`*^9}, {
-  3.7142452196840343`*^9, 3.714245317138232*^9}, {3.714247836803149*^9, 
-  3.7142478570394297`*^9}, {3.714248066912772*^9, 3.714248088933749*^9}, {
-  3.714248146958506*^9, 
-  3.71424814769276*^9}},ExpressionUUID->"76323548-f728-411e-898f-\
-b4afca8f9649"]
+4ef7-899a-34dbb69d1254"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4158,55 +4091,88 @@ Cell["BoM", "Subchapter",
   3.7142447131454906`*^9}},ExpressionUUID->"5407e6b1-4481-4bbd-896f-\
 30a1a8493c37"],
 
-Cell[BoxData[{
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data\>\"", 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 
+  3.714264462267906*^9}},ExpressionUUID->"7b906a1b-f094-423e-a3c5-\
+c26416156093"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data\"\>"], "Output",
+ CellChangeTimes->{
+  3.714264462688292*^9},ExpressionUUID->"7687c35e-496e-424a-8bdb-\
+d7f7f23ee5c7"]
+}, Open  ]],
+
+Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{
+   RowBox[{"BoMGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
     RowBox[{
-     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-  "python"}], "\n", 
- RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
-  "ECMWFDataServer"}], "\n", 
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ECMWFDataServer", 
-   RowBox[{"(", ")"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2014-01-01\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"number\\\": \
+\\\"1/2/3/4/5/6/7/8/9/10/11/12/13/14/15/16/17/18/19/20/21/22/23/24/25/26/27/\
+28/29/30/31/32\\\",\n    \\\"origin\\\": \\\"ammc\\\",\n    \\\"param\\\": \\\
+\"151/228228\\\",\n    \\\"step\\\": \
+\\\"24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/1272/1296/\
+1320/1344/1368/1392/1416/1440/1464/1488\\\",\n    \\\"stream\\\": \
+\\\"enfh\\\",\n    \\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \
+\\\"pf\\\",\n    \\\"target\\\": \\\"BoM_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<BoM_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714264237390966*^9, 3.714264287098847*^9}, {
+  3.71426433338439*^9, 3.714264435870323*^9}, {3.714264471636585*^9, 
+  3.7142644736119757`*^9}},ExpressionUUID->"c110c8b0-65ca-454d-a654-\
+652fb869720b"],
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
     RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2014-01-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<1989-02-21\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<ammc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<151/228228\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{
-     "\"\<step\>\"", ":", " ", 
-      "\"\<24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
-432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
-888/912/936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/\
-1272/1296/1320/1344/1368/1392/1416/1440/1464/1488\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
-    "}"}], ")"}]}]}], "Code",
- CellChangeTimes->{
-  3.714245565342627*^9},ExpressionUUID->"919b65e5-570a-4f6b-bf82-\
-540caf2a9012"]
+     RowBox[{"BoMGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1981", ",", "2013"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"BoMGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-0\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1981", ",", "2013"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.714264290146216*^9, 3.714264300711666*^9}, {
+  3.714264568165827*^9, 3.714264708191317*^9}, {3.714264738827105*^9, 
+  3.714264742782455*^9}, {3.714270374291835*^9, 
+  3.714270379625523*^9}},ExpressionUUID->"caa6e5c4-f024-49d2-8e6b-\
+40908eb49195"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4216,307 +4182,372 @@ Cell["CMA", "Subchapter",
   3.714245958607009*^9}},ExpressionUUID->"64e985d2-e208-4431-921b-\
 d47a08bfa3c5"],
 
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-  "python"}], "\n", 
- RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
-  "ECMWFDataServer"}], "\n", 
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ECMWFDataServer", 
-   RowBox[{"(", ")"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
-    RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2014-05-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<2009-09-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<babj\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<151\>\""}], ",", "\n", "    ", 
-     RowBox[{
-     "\"\<step\>\"", ":", " ", 
-      "\"\<0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
-432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
-888/912/936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/\
-1272/1296/1320/1344/1368/1392/1416/1440\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
-    "}"}], ")"}]}], "\n", 
- RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
-    RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2014-05-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<2009-09-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<babj\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<228228\>\""}], ",", "\n", "    ", 
-     RowBox[{
-     "\"\<step\>\"", ":", " ", 
-      "\"\<24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
-432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
-888/912/936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/\
-1272/1296/1320/1344/1368/1392/1416/1440\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
-    "}"}], ")"}]}], "\n"}], "Code",
- CellChangeTimes->{
-  3.7142459598940983`*^9},ExpressionUUID->"cec24448-41b6-4b81-9027-\
-0a63234cef60"]
-}, Open  ]],
-
 Cell[CellGroupData[{
-
-Cell["ECCC", "Subchapter",
- CellChangeTimes->{{3.714248050454857*^9, 
-  3.714248051077426*^9}},ExpressionUUID->"628d0f48-d9ea-4b56-b5b4-\
-fce7da57215c"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-  "python"}], "\n", 
- RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
-  "ECMWFDataServer"}], "\n", 
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ECMWFDataServer", 
-   RowBox[{"(", ")"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
-    RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2017-09-07\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<1995-09-07\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<cwao\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<151/228228\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{
-     "\"\<step\>\"", ":", " ", 
-      "\"\<24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
-432/456/480/504/528/552/576/600/624/648/672/696/720/744/768\>\""}], ",", "\n",
-      "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
-    "}"}], ")"}]}]}], "Code",
- CellChangeTimes->{
-  3.71424805211532*^9},ExpressionUUID->"76ff348f-25b5-4f49-b659-7adecee2e3ba"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["ECMWF", "Subchapter",
- CellChangeTimes->{{3.714244729546011*^9, 
-  3.714244730464902*^9}},ExpressionUUID->"c43be35e-aa5b-453e-a23c-\
-1571da2fe4d5"],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-  "python"}], "\n", 
- RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
-  "ECMWFDataServer"}], "\n", 
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ECMWFDataServer", 
-   RowBox[{"(", ")"}]}]}], "\n", 
- RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
-    RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2017-09-25\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<2012-09-25\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<ecmf\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<151/228228\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{
-     "\"\<step\>\"", ":", " ", 
-      "\"\<0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
-432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
-888/912/936/960/984/1008/1032/1056/1080/1104\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
-    "}"}], ")"}]}]}], "Code",
- CellChangeTimes->{3.714244732988929*^9, 
-  3.714246011714991*^9},ExpressionUUID->"cd8e1b63-b022-4553-b0db-\
-e9f0c2e4f23d"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["JMA", "Subchapter",
- CellChangeTimes->{{3.714244898989788*^9, 
-  3.714244901612368*^9}},ExpressionUUID->"d98b4d72-2ab4-4799-b824-\
-97c05d975fe6"],
 
 Cell[BoxData[
- RowBox[{" ", 
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data/CMA\>\"", 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 
+  3.7142666465164633`*^9}},ExpressionUUID->"5c7743b6-368f-463a-96dc-\
+05b07beb79ec"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/CMA\"\>"], "Output",
+ CellChangeTimes->{3.714264462688292*^9, 
+  3.714266648884035*^9},ExpressionUUID->"6a689417-f5c2-4deb-a54b-\
+961522a8a2c7"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
   RowBox[{
-   RowBox[{
+   RowBox[{"CMAGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
     RowBox[{
-     RowBox[{
-      RowBox[{
-       RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-    "python"}], "\n", 
-   RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", "ECMWFDataServer"}], 
-   "\n", 
-   RowBox[{"server", " ", "=", " ", 
-    RowBox[{"ECMWFDataServer", 
-     RowBox[{"(", ")"}]}]}], "\n", 
-   RowBox[{
-    RowBox[{"server", ".", "retrieve"}], 
-    RowBox[{"(", 
-     RowBox[{"{", "\n", " ", 
-      RowBox[{
-       RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", " ", 
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
        RowBox[{
-       "\"\<hdate\>\"", ":", " ", 
-        "\"\<19810110/19820110/19830110/19840110/19850110/19860110/19870110/\
-19880110/19890110/19900110/19910110/19920110/19930110/19940110/19950110/\
-19960110/19970110/19980110/19990110/20000110/20010110/20020110/20030110/\
-20040110/20050110/20060110/20070110/20080110/20090110/20100110\>\""}], ",", 
-       "\n", " ", 
-       RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<origin\>\"", ":", " ", "\"\<rjtd\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<param\>\"", ":", " ", "\"\<165\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<step\>\"", ":", " ", "\"\<12/to/804/by/24\>\""}], ",", 
-       "\n", " ", 
-       RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<target\>\"", ":", " ", "\"\<CHANGEME\>\""}], ",", "\n", 
-       " ", 
-       RowBox[{"\"\<time\>\"", ":", " ", "\"\<12\>\""}], ",", "\n", " ", 
-       RowBox[{"\"\<type\>\"", ":", " ", "\"\<cf\>\""}], ",", "\n", 
-       RowBox[{"\"\< date\>\"", ":", " ", "\"\<20140304\>\""}], ","}], "\n", 
-      "}"}], ")"}]}]}]}]], "Code",
- CellChangeTimes->{{3.714244857097148*^9, 
-  3.7142448660613422`*^9}},ExpressionUUID->"683c841b-335a-477b-aa02-\
-dc581272ae4a"]
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2014-05-01\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3\\\",\n    \
+\\\"origin\\\": \\\"babj\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \\\
+\"step\\\": \
+\\\"24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/1272/1296/\
+1320/1344/1368/1392/1416/1440\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n    \\\
+\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"CMA_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<CMA_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714264237390966*^9, 3.714264287098847*^9}, {
+   3.71426433338439*^9, 3.714264435870323*^9}, {3.714264471636585*^9, 
+   3.7142644736119757`*^9}, {3.714266591745026*^9, 3.714266633997621*^9}, {
+   3.71426688435443*^9, 3.7142668920966797`*^9}, 3.714267043669752*^9, {
+   3.714267484223749*^9, 
+   3.714267485096424*^9}},ExpressionUUID->"2a89cfc9-e785-4864-bfa3-\
+cab5f9bcec1c"],
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"CMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"CMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-0\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.714266662090991*^9, 3.714266665013794*^9}, {
+  3.7142666982673883`*^9, 3.714266715129896*^9}, {3.7142667584344807`*^9, 
+  3.71426675947226*^9}, {3.714267543086279*^9, 3.714267547465008*^9}, {
+  3.7142703629155807`*^9, 
+  3.714270368867193*^9}},ExpressionUUID->"2174b5d0-c934-4a95-ba7c-\
+c41323e7909b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell["NCEP", "Subchapter",
- CellChangeTimes->{{3.714244910661491*^9, 
-  3.7142449112353363`*^9}},ExpressionUUID->"04fdb8f1-4c04-43ba-8323-\
-91b82a1a2577"],
+ CellChangeTimes->{{3.714268206923994*^9, 
+  3.714268213099536*^9}},ExpressionUUID->"f7de2867-142d-4982-b436-\
+f9c2c18d2664"],
 
-Cell[BoxData[{
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data/NCEP\>\"",
+   "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}},ExpressionUUID->"266c0b90-a844-40ef-b2ad-\
+3a87626af47c"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/NCEP\"\>"], "Output",
+ CellChangeTimes->{{3.714268303489874*^9, 
+  3.714268313404454*^9}},ExpressionUUID->"5d536362-bdf0-4cc8-a03a-\
+2b7587e3f2e2"]
+}, Open  ]],
+
+Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{
+   RowBox[{"CMAGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
     RowBox[{
-     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
-  "python"}], "\n", 
- RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
-  "ECMWFDataServer"}], "\n", 
- RowBox[{"server", " ", "=", " ", 
-  RowBox[{"ECMWFDataServer", 
-   RowBox[{"(", ")"}]}]}], "\n", 
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2011-03-01\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3\\\",\n    \
+\\\"origin\\\": \\\"kwbc\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \\\
+\"step\\\": \
+\\\"24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n\t\
+\\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"NCEP_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<NCEP_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 
+  3.714268485709058*^9}},ExpressionUUID->"d77d79e7-663d-4ef9-b7dc-\
+5a12a3f8de34"],
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"CMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-0\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"CMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.714268330699274*^9, 
+  3.714268341337249*^9}},ExpressionUUID->"b876c68d-3f21-4847-983c-\
+8865c382e106"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["MeteoFrance", "Subchapter",
+ CellChangeTimes->{{3.714268206923994*^9, 3.714268213099536*^9}, {
+  3.7142687316368732`*^9, 
+  3.7142687343386707`*^9}},ExpressionUUID->"d4d2f6c5-c3b3-4478-a245-\
+3d6d0d4a5af8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/lambda/Documents/S2S/Data/MeteoFrance\>\"", "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 
+  3.7142687391780233`*^9}},ExpressionUUID->"6c4d9626-6883-4e20-8265-\
+f6d91dad8196"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/MeteoFrance\"\>"], "Output",
+ CellChangeTimes->{{3.714268303489874*^9, 3.714268313404454*^9}, 
+   3.7142687396700068`*^9},ExpressionUUID->"ca0c3394-4ed9-4e2e-835f-\
+b22d97e039fd"]
+}, Open  ]],
+
+Cell[BoxData[
  RowBox[{
-  RowBox[{"server", ".", "retrieve"}], 
-  RowBox[{"(", 
-   RowBox[{"{", "\n", "    ", 
+  RowBox[{
+   RowBox[{"MeteoFranceGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
     RowBox[{
-     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<2000-01-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2011-03-01\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<kwbc\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<param\>\"", ":", " ", "\"\<165\>\""}], ",", "\n", "    ", 
-     RowBox[{"\"\<step\>\"", ":", " ", "\"\<24/to/1056/by/24\>\""}], ",", 
-     "\n", "    ", 
-     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
-     
-     RowBox[{"\"\<target\>\"", ":", " ", "\"\<CHANGEME\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00\>\""}], ",", "\n", "     ", 
-     RowBox[{"\"\<number\>\"", ":", " ", "\"\<1/to/32\>\""}], ",", "\n", 
-     "    ", 
-     RowBox[{"\"\<type\>\"", ":", " ", "\"\<pf\>\""}], ","}], "\n", " ", 
-    "}"}], ")"}]}]}], "Code",
- CellChangeTimes->{{3.71424494035131*^9, 
-  3.7142449660742073`*^9}},ExpressionUUID->"c70b9691-d815-4222-ac46-\
-df9b32289164"]
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2014-12-01\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"number\\\": \
+\\\"1/2/3/4/5/6/7/8/9/10/11/12/13/14\\\",\n    \\\"origin\\\": \\\"lfpw\\\",\n\
+    \\\"param\\\": \\\"151/228228\\\",\n    \\\"step\\\": \
+\\\"24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/1272/1296/\
+1320/1344/1368/1392/1416/1440/1464\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n\t\
+\\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"MeteoFrance_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<MeteoFrance_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], 
+       ",", "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 3.714268485709058*^9}, {3.71426874339454*^9, 
+  3.714268746376237*^9}, {3.714268826712167*^9, 3.714268876815598*^9}, {
+  3.714268932973222*^9, 
+  3.714268958463032*^9}},ExpressionUUID->"8ff2faf9-d644-4e59-afa0-\
+9570deaaed59"],
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"MeteoFranceGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-0\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1993", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"MeteoFranceGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1993", ",", "2014"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.714268330699274*^9, 3.714268341337249*^9}, {
+  3.7142687853209763`*^9, 3.7142687890950403`*^9}, {3.714268966179885*^9, 
+  3.714268977474298*^9}},ExpressionUUID->"f0d1cc8b-44b4-4f26-8e6e-\
+ec7a77181a12"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["JMA", "Subchapter",
+ CellChangeTimes->{{3.714268206923994*^9, 3.714268213099536*^9}, {
+  3.7142687316368732`*^9, 3.7142687343386707`*^9}, {3.7142693508109493`*^9, 
+  3.7142693511447697`*^9}},ExpressionUUID->"779d43bf-b625-44a5-b4a3-\
+efa745b5ff0f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data/JMA\>\"", 
+  "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 3.7142687391780233`*^9}, {
+  3.714269353512988*^9, 
+  3.714269353848917*^9}},ExpressionUUID->"75a78e7c-a7e4-44ee-b5d5-\
+a4517b971323"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/JMA\"\>"], "Output",
+ CellChangeTimes->{{3.714268303489874*^9, 3.714268313404454*^9}, 
+   3.7142687396700068`*^9, 
+   3.714269503023961*^9},ExpressionUUID->"fa7188ee-8e6c-4192-a4ff-\
+548b04e8f634"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"JMAGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2014-03-04\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3/4\\\",\n    \
+\\\"origin\\\": \\\"rjtd\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \\\
+\"step\\\": \
+\\\"12/36/60/84/108/132/156/180/204/228/252/276/300/324/348/372/396/420/444/\
+468/492/516/540/564/588/612/636/660/684/708/732/756/780/804\\\",\n    \
+\\\"stream\\\": \\\"enfh\\\",\n\t\\\"time\\\": \\\"12:00:00\\\",\n    \
+\\\"type\\\": \\\"pf\\\",\n    \\\"target\\\": \\\"JMA_\>\"", "<>", "date", 
+        "<>", "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}],
+       "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<JMA_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 3.714268485709058*^9}, {3.71426874339454*^9, 
+  3.714268746376237*^9}, {3.714268826712167*^9, 3.714268876815598*^9}, {
+  3.714268932973222*^9, 3.714268958463032*^9}, {3.7142694304178267`*^9, 
+  3.714269499205832*^9}, {3.714269540070834*^9, 3.714269540412923*^9}, {
+  3.714269627119279*^9, 
+  3.7142696299574947`*^9}},ExpressionUUID->"7c8f6583-1fb7-4a2b-9dd5-\
+a016c80720f1"],
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"JMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-0\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-10\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1981", ",", "2010"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"JMAGenerator", "[", 
+      RowBox[{
+       RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-\>\"", "<>", 
+       RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-10\>\""}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"year", ",", "1981", ",", "2010"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}]}], "Code",
+ CellChangeTimes->{{3.714268330699274*^9, 3.714268341337249*^9}, {
+  3.7142687853209763`*^9, 3.7142687890950403`*^9}, {3.714268966179885*^9, 
+  3.714268977474298*^9}, {3.714269379050331*^9, 3.7142693932646637`*^9}, {
+  3.714269508733459*^9, 
+  3.7142695123012*^9}},ExpressionUUID->"cf7be598-9024-43b0-8fe7-7aca54a6ffca"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -4534,15 +4565,15 @@ StyleDefinitions->FrontEnd`FileName[{"SlideShow"}, "Garnet.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "SlideShowHeader"->{
-  Cell[580, 22, 4399, 98, 
+  Cell[422, 15, 4399, 98, 
   75, "SlideShowNavigationBar", "ExpressionUUID" -> "
    23b94830-026b-4002-8a80-132a8b31101e",
    CellTags->"SlideShowHeader"],
-  Cell[5593, 144, 122, 2, 
+  Cell[5435, 137, 122, 2, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    8819f24e-2ff2-439e-9c08-3e09a58a3274",
    CellTags->"SlideShowHeader"],
-  Cell[10646, 288, 122, 2, 
+  Cell[10488, 281, 122, 2, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "f619320b-
    b634-4e0f-96e7-69506ee7764e",
    CellTags->"SlideShowHeader"]}
@@ -4550,114 +4581,146 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 258913, 4535}
+ {"SlideShowHeader", 260991, 4566}
  }
 *)
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 4399, 98, 75, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[422, 15, 4399, 98, 75, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "23b94830-026b-4002-8a80-132a8b31101e",
  CellTags->"SlideShowHeader"],
-Cell[4982, 122, 184, 4, 311, "Title", "ExpressionUUID" -> \
+Cell[4824, 115, 184, 4, 311, "Title", "ExpressionUUID" -> \
 "9de4e19e-3842-46a5-9e11-83b04819207e"],
-Cell[5169, 128, 176, 3, 115, "Subtitle", "ExpressionUUID" -> \
+Cell[5011, 121, 176, 3, 115, "Subtitle", "ExpressionUUID" -> \
 "e115a166-edad-4189-ae7d-23f1fd984060"],
-Cell[5348, 133, 208, 6, 93, "Text", "ExpressionUUID" -> \
+Cell[5190, 126, 208, 6, 93, "Text", "ExpressionUUID" -> \
 "44fc297c-5571-4683-b3eb-b49a109a597b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5593, 144, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[5435, 137, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "8819f24e-2ff2-439e-9c08-3e09a58a3274",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[5740, 150, 305, 7, 194, "Section", "ExpressionUUID" -> \
+Cell[5582, 143, 305, 7, 194, "Section", "ExpressionUUID" -> \
 "e660fb7c-7d60-410a-9784-9ab87c0c9c0f"],
-Cell[6048, 159, 840, 18, 549, "Text", "ExpressionUUID" -> \
+Cell[5890, 152, 840, 18, 549, "Text", "ExpressionUUID" -> \
 "2cb67296-bd62-4b53-92c8-d8c0b13c3f30"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6925, 182, 158, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[6767, 175, 158, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "f32b23d8-b0b9-4f96-84c5-032ac32e1e98"],
 Cell[CellGroupData[{
-Cell[7108, 189, 224, 5, 53, "Item", "ExpressionUUID" -> \
+Cell[6950, 182, 224, 5, 53, "Item", "ExpressionUUID" -> \
 "b3749365-4683-4da2-89da-a8a6b2584f78"],
-Cell[7335, 196, 154, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[7177, 189, 154, 3, 49, "Subitem", "ExpressionUUID" -> \
 "c02572e5-9a3a-4dff-82f5-2a6445ab5616"],
-Cell[7492, 201, 195, 3, 53, "Item", "ExpressionUUID" -> \
+Cell[7334, 194, 195, 3, 53, "Item", "ExpressionUUID" -> \
 "f7c52678-169d-4970-8c9e-ebc1aa541a08"],
-Cell[7690, 206, 160, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[7532, 199, 160, 3, 49, "Subitem", "ExpressionUUID" -> \
 "fbb13ee3-f042-4a32-b347-e41da24aa781"],
-Cell[7853, 211, 422, 10, 90, "Item", "ExpressionUUID" -> \
+Cell[7695, 204, 422, 10, 90, "Item", "ExpressionUUID" -> \
 "905a720f-f8bb-4e51-b56a-62b8ee07b155"],
-Cell[8278, 223, 152, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[8120, 216, 152, 3, 49, "Subitem", "ExpressionUUID" -> \
 "f5afd4da-181b-45f1-a6b3-c8c5db1a64bc"]
 }, Open  ]],
-Cell[8445, 229, 269, 5, 55, "Text", "ExpressionUUID" -> \
+Cell[8287, 222, 269, 5, 55, "Text", "ExpressionUUID" -> \
 "f6a86f0c-ed12-4f46-b717-721998341dfa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8751, 239, 190, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[8593, 232, 190, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "d70d49c1-8c37-4aff-9858-15e616d84d32"],
-Cell[8944, 244, 691, 11, 207, "Text", "ExpressionUUID" -> \
+Cell[8786, 237, 691, 11, 207, "Text", "ExpressionUUID" -> \
 "fc7ea842-66b0-4541-aba2-88262a96d384"],
 Cell[CellGroupData[{
-Cell[9660, 259, 268, 6, 89, "Item", "ExpressionUUID" -> \
+Cell[9502, 252, 268, 6, 89, "Item", "ExpressionUUID" -> \
 "53040baf-6f7f-4c97-9b35-ff019f8f37a9"],
-Cell[9931, 267, 153, 3, 53, "Item", "ExpressionUUID" -> \
+Cell[9773, 260, 153, 3, 53, "Item", "ExpressionUUID" -> \
 "8ccaff01-300a-46ce-b13f-4eebb2661ecc"]
 }, Open  ]],
-Cell[10099, 273, 498, 9, 169, "Text", "ExpressionUUID" -> \
+Cell[9941, 266, 498, 9, 169, "Text", "ExpressionUUID" -> \
 "724eaa97-e5fd-4eab-995c-047ff954ad73"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10646, 288, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[10488, 281, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "f619320b-b634-4e0f-96e7-69506ee7764e",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[10793, 294, 306, 5, 123, "Section", "ExpressionUUID" -> \
+Cell[10635, 287, 306, 5, 123, "Section", "ExpressionUUID" -> \
 "1cddc845-c4ab-4299-81ae-e02e2ed36602"],
-Cell[11102, 301, 230639, 3789, 679, "Input", "ExpressionUUID" -> \
-"3da5841b-88fe-4ef7-899a-34dbb69d1254"],
-Cell[241744, 4092, 2372, 58, 455, "Code", "ExpressionUUID" -> \
-"76323548-f728-411e-898f-b4afca8f9649"]
+Cell[10944, 294, 230639, 3789, 679, "Input", "ExpressionUUID" -> \
+"3da5841b-88fe-4ef7-899a-34dbb69d1254"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[244153, 4155, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[241620, 4088, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "5407e6b1-4481-4bbd-896f-30a1a8493c37"],
-Cell[244309, 4160, 2021, 48, 647, "Code", "ExpressionUUID" -> \
-"919b65e5-570a-4f6b-bf82-540caf2a9012"]
+Cell[CellGroupData[{
+Cell[241798, 4095, 232, 5, 70, "Code", "ExpressionUUID" -> \
+"7b906a1b-f094-423e-a3c5-c26416156093"],
+Cell[242033, 4102, 169, 3, 47, "Output", "ExpressionUUID" -> \
+"7687c35e-496e-424a-8bdb-d7f7f23ee5c7"]
+}, Open  ]],
+Cell[242217, 4108, 1793, 33, 775, "Code", "ExpressionUUID" -> \
+"c110c8b0-65ca-454d-a654-652fb869720b"],
+Cell[244013, 4143, 1212, 31, 103, "Code", "ExpressionUUID" -> \
+"caa6e5c4-f024-49d2-8e6b-40908eb49195"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[246367, 4213, 151, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[245262, 4179, 151, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "64e985d2-e208-4431-921b-d47a08bfa3c5"],
-Cell[246521, 4218, 3566, 80, 1191, "Code", "ExpressionUUID" -> \
-"cec24448-41b6-4b81-9027-0a63234cef60"]
+Cell[CellGroupData[{
+Cell[245438, 4186, 286, 6, 70, "Code", "ExpressionUUID" -> \
+"5c7743b6-368f-463a-96dc-05b07beb79ec"],
+Cell[245727, 4194, 195, 3, 47, "Output", "ExpressionUUID" -> \
+"6a689417-f5c2-4deb-a54b-961522a8a2c7"]
+}, Open  ]],
+Cell[245937, 4200, 1875, 35, 775, "Code", "ExpressionUUID" -> \
+"2a89cfc9-e785-4864-bfa3-cab5f9bcec1c"],
+Cell[247815, 4237, 1266, 32, 103, "Code", "ExpressionUUID" -> \
+"2174b5d0-c934-4a95-ba7c-c41323e7909b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[250124, 4303, 152, 3, 63, "Subchapter", "ExpressionUUID" -> \
-"628d0f48-d9ea-4b56-b5b4-fce7da57215c"],
-Cell[250279, 4308, 1879, 46, 647, "Code", "ExpressionUUID" -> \
-"76ff348f-25b5-4f49-b659-7adecee2e3ba"]
+Cell[249118, 4274, 152, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"f7de2867-142d-4982-b436-f9c2c18d2664"],
+Cell[CellGroupData[{
+Cell[249295, 4281, 335, 6, 70, "Code", "ExpressionUUID" -> \
+"266c0b90-a844-40ef-b2ad-3a87626af47c"],
+Cell[249633, 4289, 198, 3, 47, "Output", "ExpressionUUID" -> \
+"5d536362-bdf0-4cc8-a03a-2b7587e3f2e2"]
+}, Open  ]],
+Cell[249846, 4295, 1573, 31, 775, "Code", "ExpressionUUID" -> \
+"d77d79e7-663d-4ef9-b7dc-5a12a3f8de34"],
+Cell[251422, 4328, 1068, 29, 103, "Code", "ExpressionUUID" -> \
+"b876c68d-3f21-4847-983c-8865c382e106"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[252195, 4359, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
-"c43be35e-aa5b-453e-a23c-1571da2fe4d5"],
-Cell[252351, 4364, 1963, 47, 647, "Code", "ExpressionUUID" -> \
-"cd8e1b63-b022-4553-b0db-e9f0c2e4f23d"]
+Cell[252527, 4362, 212, 4, 63, "Subchapter", "ExpressionUUID" -> \
+"d4d2f6c5-c3b3-4478-a245-3d6d0d4a5af8"],
+Cell[CellGroupData[{
+Cell[252764, 4370, 392, 7, 70, "Code", "ExpressionUUID" -> \
+"6c4d9626-6883-4e20-8265-f6d91dad8196"],
+Cell[253159, 4379, 230, 3, 47, "Output", "ExpressionUUID" -> \
+"ca0c3394-4ed9-4e2e-835f-b22d97e039fd"]
+}, Open  ]],
+Cell[253404, 4385, 1855, 35, 775, "Code", "ExpressionUUID" -> \
+"8ff2faf9-d644-4e59-afa0-9570deaaed59"],
+Cell[255262, 4422, 1183, 30, 103, "Code", "ExpressionUUID" -> \
+"f0d1cc8b-44b4-4f26-8e6e-ec7a77181a12"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[254351, 4416, 151, 3, 63, "Subchapter", "ExpressionUUID" -> \
-"d98b4d72-2ab4-4799-b824-97c05d975fe6"],
-Cell[254505, 4421, 1984, 43, 615, "Code", "ExpressionUUID" -> \
-"683c841b-335a-477b-aa02-dc581272ae4a"]
-}, Open  ]],
+Cell[256482, 4457, 254, 4, 63, "Subchapter", "ExpressionUUID" -> \
+"779d43bf-b625-44a5-b4a3-efa745b5ff0f"],
 Cell[CellGroupData[{
-Cell[256526, 4469, 154, 3, 63, "Subchapter", "ExpressionUUID" -> \
-"04fdb8f1-4c04-43ba-8323-91b82a1a2577"],
-Cell[256683, 4474, 1784, 44, 647, "Code", "ExpressionUUID" -> \
-"c70b9691-d815-4222-ac46-df9b32289164"]
+Cell[256761, 4465, 433, 8, 70, "Code", "ExpressionUUID" -> \
+"75a78e7c-a7e4-44ee-b5d5-a4517b971323"],
+Cell[257197, 4475, 248, 4, 47, "Output", "ExpressionUUID" -> \
+"fa7188ee-8e6c-4192-a4ff-548b04e8f634"]
+}, Open  ]],
+Cell[257460, 4482, 1819, 34, 775, "Code", "ExpressionUUID" -> \
+"7c8f6583-1fb7-4a2b-9dd5-a016c80720f1"],
+Cell[259282, 4518, 1263, 31, 103, "Code", "ExpressionUUID" -> \
+"cf7be598-9024-43b0-8fe7-7aca54a6ffca"]
 }, Open  ]]
 }, Open  ]]
 }
