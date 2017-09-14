@@ -3,10 +3,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[         0,          0]
-NotebookDataLength[    267302,       4728]
-NotebookOptionsPosition[    260573,       4553]
-NotebookOutlinePosition[    261564,       4587]
-CellTagsIndexPosition[    261484,       4582]
+NotebookDataLength[    301537,       5513]
+NotebookOptionsPosition[    289990,       5221]
+NotebookOutlinePosition[    291458,       5267]
+CellTagsIndexPosition[    291378,       5262]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -119,9 +119,10 @@ Cell["S2S Dataset", "Title",
    3.7142411756373167`*^9}},ExpressionUUID->"9de4e19e-3842-46a5-9e11-\
 83b04819207e"],
 
-Cell["Data Description and Require", "Subtitle",
- CellChangeTimes->{{3.714241253924412*^9, 
-  3.7142412607222757`*^9}},ExpressionUUID->"e115a166-edad-4189-ae7d-\
+Cell["Data Description and Acquire", "Subtitle",
+ CellChangeTimes->{{3.714241253924412*^9, 3.7142412607222757`*^9}, {
+  3.714324900632475*^9, 
+  3.714324902013075*^9}},ExpressionUUID->"e115a166-edad-4189-ae7d-\
 23f1fd984060"],
 
 Cell["\<\
@@ -4337,7 +4338,7 @@ Cell[BoxData[{
        RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
      ",", 
      RowBox[{"{", 
-      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+      RowBox[{"year", ",", "1999", ",", "2010"}], "}"}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"month", ",", "1", ",", "9"}], "}"}]}], "]"}], "\n", 
  RowBox[{"Table", "[", 
@@ -4350,11 +4351,12 @@ Cell[BoxData[{
        RowBox[{"ToString", "[", "month", "]"}], "<>", "\"\<-01\>\""}], "]"}], 
      ",", 
      RowBox[{"{", 
-      RowBox[{"year", ",", "1994", ",", "2014"}], "}"}]}], "]"}], ",", 
+      RowBox[{"year", ",", "1999", ",", "2010"}], "}"}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"month", ",", "10", ",", "12"}], "}"}]}], "]"}]}], "Code",
- CellChangeTimes->{{3.714268330699274*^9, 
-  3.714268341337249*^9}},ExpressionUUID->"b876c68d-3f21-4847-983c-\
+ CellChangeTimes->{{3.714268330699274*^9, 3.714268341337249*^9}, {
+  3.714334567660623*^9, 
+  3.714334574089199*^9}},ExpressionUUID->"b876c68d-3f21-4847-983c-\
 8865c382e106"]
 }, Open  ]],
 
@@ -4548,6 +4550,672 @@ Cell[BoxData[{
   3.714268977474298*^9}, {3.714269379050331*^9, 3.7142693932646637`*^9}, {
   3.714269508733459*^9, 
   3.7142695123012*^9}},ExpressionUUID->"cf7be598-9024-43b0-8fe7-7aca54a6ffca"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ECMWF", "Subchapter",
+ CellChangeTimes->{{3.714311153073365*^9, 
+  3.714311153847067*^9}},ExpressionUUID->"54fd2137-35dd-4cad-be8b-\
+df6efb53356d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/lambda/Documents/S2S/Data/ECMWF\>\"", "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 3.7142687391780233`*^9}, {
+  3.714269353512988*^9, 3.714269353848917*^9}, {3.7143111811694393`*^9, 
+  3.7143111846546183`*^9}},ExpressionUUID->"035cbb0c-24cf-47bd-8dc7-\
+fee4c7403bbd"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/ECMWF\"\>"], "Output",
+ CellChangeTimes->{
+  3.714311185068245*^9},ExpressionUUID->"1e154e4d-b08b-4a08-96f1-\
+bcb89c51fe15"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ECMWFGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2016\>\"", "<>", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"date", ",", 
+          RowBox[{"{", 
+           RowBox[{"5", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "]"}], "<>", 
+        "\"\<\\\",\n    \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \
+\\\"\>\"", "<>", "date", "<>", 
+        "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \\\"model\\\": \
+\\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3/4/5/6/7/8/9/10\\\",\n    \
+\\\"origin\\\": \\\"ecmf\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \\\
+\"step\\\": \
+\\\"0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n\
+\t\\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"ECMWF_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<ECMWF_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 3.714268485709058*^9}, {3.71426874339454*^9, 
+  3.714268746376237*^9}, {3.714268826712167*^9, 3.714268876815598*^9}, {
+  3.714268932973222*^9, 3.714268958463032*^9}, {3.7142694304178267`*^9, 
+  3.714269499205832*^9}, {3.714269540070834*^9, 3.714269540412923*^9}, {
+  3.714269627119279*^9, 3.7142696299574947`*^9}, {3.714311196057495*^9, 
+  3.714311271797688*^9}, {3.7143123933258057`*^9, 3.714312394650927*^9}, {
+  3.714312428834354*^9, 3.714312471344593*^9}, {3.714312708367319*^9, 
+  3.714312708725842*^9}},ExpressionUUID->"f1eb07c6-150e-44d6-86e1-\
+76f2017268a9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ECMWFGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-10-03\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1997", ",", "2015"}], "}"}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.7143113562509336`*^9, 3.714311361657681*^9}, {
+  3.7143116896587973`*^9, 3.714311807323214*^9}, {3.714312504790884*^9, 
+  3.714312508961522*^9}, {3.714312551588715*^9, 3.71431255176011*^9}, {
+  3.71431260405169*^9, 3.714312607150908*^9}, {3.7143126572425127`*^9, 
+  3.714312672836596*^9}, {3.714312712561096*^9, 3.714312723917047*^9}, {
+  3.714312766232933*^9, 
+  3.714312769627792*^9}},ExpressionUUID->"6ab8ae77-6a1f-45eb-8e92-\
+c076c257ad24"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"ECMWF_1997-10-03.py\"\>", ",", "\<\"ECMWF_1998-10-03.py\"\>", 
+   ",", "\<\"ECMWF_1999-10-03.py\"\>", ",", "\<\"ECMWF_2000-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2001-10-03.py\"\>", ",", "\<\"ECMWF_2002-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2003-10-03.py\"\>", ",", "\<\"ECMWF_2004-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2005-10-03.py\"\>", ",", "\<\"ECMWF_2006-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2007-10-03.py\"\>", ",", "\<\"ECMWF_2008-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2009-10-03.py\"\>", ",", "\<\"ECMWF_2010-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2011-10-03.py\"\>", ",", "\<\"ECMWF_2012-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2013-10-03.py\"\>", ",", "\<\"ECMWF_2014-10-03.py\"\>", 
+   ",", "\<\"ECMWF_2015-10-03.py\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7143113685485764`*^9, {3.7143116902769012`*^9, 3.714311807622835*^9}, 
+   3.714312509472172*^9, {3.714312600900045*^9, 3.714312607497011*^9}, {
+   3.714312658557097*^9, 3.714312673052258*^9}, {3.714312716276328*^9, 
+   3.714312726832789*^9}, {3.714312764508121*^9, 
+   3.714312770702799*^9}},ExpressionUUID->"3f081681-1787-4f8b-b071-\
+2c03846fd9b7"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["HCMR", "Subchapter",
+ CellChangeTimes->{{3.714311153073365*^9, 3.714311153847067*^9}, {
+  3.7143118827894773`*^9, 
+  3.714311883305931*^9}},ExpressionUUID->"0954bc72-9298-467f-b30d-\
+d230b258cde6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data/HCMR\>\"",
+   "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 3.7142687391780233`*^9}, {
+  3.714269353512988*^9, 3.714269353848917*^9}, {3.7143111811694393`*^9, 
+  3.7143111846546183`*^9}, {3.7143118859541273`*^9, 
+  3.7143118868980293`*^9}},ExpressionUUID->"1f8bd330-e391-4fdc-94ed-\
+6cd3d088f3e8"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/HCMR\"\>"], "Output",
+ CellChangeTimes->{3.714311185068245*^9, 3.714311887702276*^9, 
+  3.7143129116673927`*^9},ExpressionUUID->"7eadf5fe-74ec-4ce7-91e3-\
+c76b098cee19"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"HCMRGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2016\>\"", "<>", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"date", ",", 
+          RowBox[{"{", 
+           RowBox[{"5", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "]"}], "<>", 
+        "\"\<\\\",\n    \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \
+\\\"\>\"", "<>", "date", "<>", 
+        "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \\\"model\\\": \
+\\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3/4/5/6/7/8/9\\\",\n    \\\"origin\
+\\\": \\\"rums\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \
+\\\"step\\\": \
+\\\"0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/1272/1296/\
+1320/1344/1368/1392/1416/1440/1464\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n\t\
+\\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"HCMR_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<HCMR_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 3.714268485709058*^9}, {3.71426874339454*^9, 
+  3.714268746376237*^9}, {3.714268826712167*^9, 3.714268876815598*^9}, {
+  3.714268932973222*^9, 3.714268958463032*^9}, {3.7142694304178267`*^9, 
+  3.714269499205832*^9}, {3.714269540070834*^9, 3.714269540412923*^9}, {
+  3.714269627119279*^9, 3.7142696299574947`*^9}, {3.714311196057495*^9, 
+  3.714311271797688*^9}, {3.7143118950997353`*^9, 3.714311896267321*^9}, {
+  3.71431201033707*^9, 3.714312071422855*^9}, {3.714312845503345*^9, 
+  3.714312861487829*^9}, {3.714313015585009*^9, 
+  3.714313015991568*^9}},ExpressionUUID->"370d6fb0-35db-4e21-bd51-\
+01b69b6fa07c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"HCMRGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-09-07\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1985", ",", "2010"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"HCMRGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-10-05\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1985", ",", "2010"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"HCMRGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-11-02\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1985", ",", "2010"}], "}"}]}], "]"}], "\n", 
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"HCMRGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-12-07\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1985", ",", "2010"}], "}"}]}], "]"}], "\n"}], "Code",\
+
+ CellChangeTimes->{{3.7143113562509336`*^9, 3.714311361657681*^9}, {
+  3.7143116896587973`*^9, 3.714311807323214*^9}, {3.714312099269926*^9, 
+  3.714312119293447*^9}, {3.7143121707526407`*^9, 3.714312182272779*^9}, {
+  3.71431295799832*^9, 3.714312981844431*^9}, {3.714313021911825*^9, 
+  3.714313075532132*^9}},ExpressionUUID->"9fc787ec-8881-4c9d-bf0f-\
+21ede1b976fe"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"HCMR_1985-09-07.py\"\>", ",", "\<\"HCMR_1986-09-07.py\"\>", 
+   ",", "\<\"HCMR_1987-09-07.py\"\>", ",", "\<\"HCMR_1988-09-07.py\"\>", 
+   ",", "\<\"HCMR_1989-09-07.py\"\>", ",", "\<\"HCMR_1990-09-07.py\"\>", 
+   ",", "\<\"HCMR_1991-09-07.py\"\>", ",", "\<\"HCMR_1992-09-07.py\"\>", 
+   ",", "\<\"HCMR_1993-09-07.py\"\>", ",", "\<\"HCMR_1994-09-07.py\"\>", 
+   ",", "\<\"HCMR_1995-09-07.py\"\>", ",", "\<\"HCMR_1996-09-07.py\"\>", 
+   ",", "\<\"HCMR_1997-09-07.py\"\>", ",", "\<\"HCMR_1998-09-07.py\"\>", 
+   ",", "\<\"HCMR_1999-09-07.py\"\>", ",", "\<\"HCMR_2000-09-07.py\"\>", 
+   ",", "\<\"HCMR_2001-09-07.py\"\>", ",", "\<\"HCMR_2002-09-07.py\"\>", 
+   ",", "\<\"HCMR_2003-09-07.py\"\>", ",", "\<\"HCMR_2004-09-07.py\"\>", 
+   ",", "\<\"HCMR_2005-09-07.py\"\>", ",", "\<\"HCMR_2006-09-07.py\"\>", 
+   ",", "\<\"HCMR_2007-09-07.py\"\>", ",", "\<\"HCMR_2008-09-07.py\"\>", 
+   ",", "\<\"HCMR_2009-09-07.py\"\>", ",", "\<\"HCMR_2010-09-07.py\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7143113685485764`*^9, {3.7143116902769012`*^9, 3.714311807622835*^9}, {
+   3.714312109166737*^9, 3.714312129697419*^9}, 3.714312982988317*^9, 
+   3.7143130808705177`*^9},ExpressionUUID->"e05c8794-ee4c-41c2-9cfc-\
+ed111f6d8738"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"HCMR_1985-10-05.py\"\>", ",", "\<\"HCMR_1986-10-05.py\"\>", 
+   ",", "\<\"HCMR_1987-10-05.py\"\>", ",", "\<\"HCMR_1988-10-05.py\"\>", 
+   ",", "\<\"HCMR_1989-10-05.py\"\>", ",", "\<\"HCMR_1990-10-05.py\"\>", 
+   ",", "\<\"HCMR_1991-10-05.py\"\>", ",", "\<\"HCMR_1992-10-05.py\"\>", 
+   ",", "\<\"HCMR_1993-10-05.py\"\>", ",", "\<\"HCMR_1994-10-05.py\"\>", 
+   ",", "\<\"HCMR_1995-10-05.py\"\>", ",", "\<\"HCMR_1996-10-05.py\"\>", 
+   ",", "\<\"HCMR_1997-10-05.py\"\>", ",", "\<\"HCMR_1998-10-05.py\"\>", 
+   ",", "\<\"HCMR_1999-10-05.py\"\>", ",", "\<\"HCMR_2000-10-05.py\"\>", 
+   ",", "\<\"HCMR_2001-10-05.py\"\>", ",", "\<\"HCMR_2002-10-05.py\"\>", 
+   ",", "\<\"HCMR_2003-10-05.py\"\>", ",", "\<\"HCMR_2004-10-05.py\"\>", 
+   ",", "\<\"HCMR_2005-10-05.py\"\>", ",", "\<\"HCMR_2006-10-05.py\"\>", 
+   ",", "\<\"HCMR_2007-10-05.py\"\>", ",", "\<\"HCMR_2008-10-05.py\"\>", 
+   ",", "\<\"HCMR_2009-10-05.py\"\>", ",", "\<\"HCMR_2010-10-05.py\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7143113685485764`*^9, {3.7143116902769012`*^9, 3.714311807622835*^9}, {
+   3.714312109166737*^9, 3.714312129697419*^9}, 3.714312982988317*^9, 
+   3.7143130808974123`*^9},ExpressionUUID->"c8aa9caf-99f5-4f67-a4a2-\
+97bb1cf1760e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"HCMR_1985-11-02.py\"\>", ",", "\<\"HCMR_1986-11-02.py\"\>", 
+   ",", "\<\"HCMR_1987-11-02.py\"\>", ",", "\<\"HCMR_1988-11-02.py\"\>", 
+   ",", "\<\"HCMR_1989-11-02.py\"\>", ",", "\<\"HCMR_1990-11-02.py\"\>", 
+   ",", "\<\"HCMR_1991-11-02.py\"\>", ",", "\<\"HCMR_1992-11-02.py\"\>", 
+   ",", "\<\"HCMR_1993-11-02.py\"\>", ",", "\<\"HCMR_1994-11-02.py\"\>", 
+   ",", "\<\"HCMR_1995-11-02.py\"\>", ",", "\<\"HCMR_1996-11-02.py\"\>", 
+   ",", "\<\"HCMR_1997-11-02.py\"\>", ",", "\<\"HCMR_1998-11-02.py\"\>", 
+   ",", "\<\"HCMR_1999-11-02.py\"\>", ",", "\<\"HCMR_2000-11-02.py\"\>", 
+   ",", "\<\"HCMR_2001-11-02.py\"\>", ",", "\<\"HCMR_2002-11-02.py\"\>", 
+   ",", "\<\"HCMR_2003-11-02.py\"\>", ",", "\<\"HCMR_2004-11-02.py\"\>", 
+   ",", "\<\"HCMR_2005-11-02.py\"\>", ",", "\<\"HCMR_2006-11-02.py\"\>", 
+   ",", "\<\"HCMR_2007-11-02.py\"\>", ",", "\<\"HCMR_2008-11-02.py\"\>", 
+   ",", "\<\"HCMR_2009-11-02.py\"\>", ",", "\<\"HCMR_2010-11-02.py\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7143113685485764`*^9, {3.7143116902769012`*^9, 3.714311807622835*^9}, {
+   3.714312109166737*^9, 3.714312129697419*^9}, 3.714312982988317*^9, 
+   3.7143130809197683`*^9},ExpressionUUID->"8272c922-042c-4498-994c-\
+bf64846cfe34"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"HCMR_1985-12-07.py\"\>", ",", "\<\"HCMR_1986-12-07.py\"\>", 
+   ",", "\<\"HCMR_1987-12-07.py\"\>", ",", "\<\"HCMR_1988-12-07.py\"\>", 
+   ",", "\<\"HCMR_1989-12-07.py\"\>", ",", "\<\"HCMR_1990-12-07.py\"\>", 
+   ",", "\<\"HCMR_1991-12-07.py\"\>", ",", "\<\"HCMR_1992-12-07.py\"\>", 
+   ",", "\<\"HCMR_1993-12-07.py\"\>", ",", "\<\"HCMR_1994-12-07.py\"\>", 
+   ",", "\<\"HCMR_1995-12-07.py\"\>", ",", "\<\"HCMR_1996-12-07.py\"\>", 
+   ",", "\<\"HCMR_1997-12-07.py\"\>", ",", "\<\"HCMR_1998-12-07.py\"\>", 
+   ",", "\<\"HCMR_1999-12-07.py\"\>", ",", "\<\"HCMR_2000-12-07.py\"\>", 
+   ",", "\<\"HCMR_2001-12-07.py\"\>", ",", "\<\"HCMR_2002-12-07.py\"\>", 
+   ",", "\<\"HCMR_2003-12-07.py\"\>", ",", "\<\"HCMR_2004-12-07.py\"\>", 
+   ",", "\<\"HCMR_2005-12-07.py\"\>", ",", "\<\"HCMR_2006-12-07.py\"\>", 
+   ",", "\<\"HCMR_2007-12-07.py\"\>", ",", "\<\"HCMR_2008-12-07.py\"\>", 
+   ",", "\<\"HCMR_2009-12-07.py\"\>", ",", "\<\"HCMR_2010-12-07.py\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.7143113685485764`*^9, {3.7143116902769012`*^9, 3.714311807622835*^9}, {
+   3.714312109166737*^9, 3.714312129697419*^9}, 3.714312982988317*^9, 
+   3.714313080939507*^9},ExpressionUUID->"10f1d7cf-f35b-4714-a283-\
+5894c25f08db"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["ISAC-CNR", "Subchapter",
+ CellChangeTimes->{{3.714315319558774*^9, 
+  3.7143153233255043`*^9}},ExpressionUUID->"ea55f13e-ed6c-4fd0-a10f-\
+42fc86e891bc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\</Users/lambda/Documents/S2S/Data/ISAC-CNR\>\"", "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 3.7142687391780233`*^9}, {
+  3.714269353512988*^9, 3.714269353848917*^9}, {3.7143111811694393`*^9, 
+  3.7143111846546183`*^9}, {3.7143118859541273`*^9, 3.7143118868980293`*^9}, {
+  3.714315821765048*^9, 
+  3.7143158245392447`*^9}},ExpressionUUID->"70dcf19e-26a4-465b-ac76-\
+cad088ccef7c"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/ISAC-CNR\"\>"], "Output",
+ CellChangeTimes->{3.714311185068245*^9, 3.714311887702276*^9, 
+  3.7143129116673927`*^9, 3.714315825014448*^9, 
+  3.714316079889481*^9},ExpressionUUID->"5c2c3a62-b833-4c52-8d86-\
+4a08b91db861"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ISACCNRGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2015-03-26\\\",\n  \
+  \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \\\"\>\"", "<>", "date", 
+        "<>", "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \
+\\\"model\\\": \\\"glob\\\",\n    \\\"origin\\\": \\\"isac\\\",\n    \
+\\\"param\\\": \\\"151/228228\\\",\n    \\\"step\\\": \
+\\\"24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744\\\",\n    \\\"stream\\\": \
+\\\"enfh\\\",\n    \\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \
+\\\"cf\\\",\n    \\\"target\\\": \\\"ISACCNR_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<ISACCNR_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714264237390966*^9, 3.714264287098847*^9}, {
+  3.71426433338439*^9, 3.714264435870323*^9}, {3.714264471636585*^9, 
+  3.7142644736119757`*^9}, {3.71431584533331*^9, 3.714315847163515*^9}, {
+  3.714315977894187*^9, 3.7143160303405857`*^9}, {3.7143162196204576`*^9, 
+  3.7143162197859983`*^9}},ExpressionUUID->"f3063fdd-fbe5-4ca2-a7d0-\
+7ec4c9477521"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ISACCNRGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-12-02\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1981", ",", "2010"}], "}"}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.714316040332803*^9, 3.714316116177999*^9}, {
+  3.71431629119516*^9, 
+  3.714316345813745*^9}},ExpressionUUID->"95a6e7ea-88e8-4f65-948c-\
+5dd433c76507"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"ISACCNR_1981-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1982-12-02.py\"\>", ",", "\<\"ISACCNR_1983-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1984-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1985-12-02.py\"\>", ",", "\<\"ISACCNR_1986-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1987-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1988-12-02.py\"\>", ",", "\<\"ISACCNR_1989-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1990-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1991-12-02.py\"\>", ",", "\<\"ISACCNR_1992-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1993-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1994-12-02.py\"\>", ",", "\<\"ISACCNR_1995-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1996-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_1997-12-02.py\"\>", ",", "\<\"ISACCNR_1998-12-02.py\"\>",
+    ",", "\<\"ISACCNR_1999-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_2000-12-02.py\"\>", ",", "\<\"ISACCNR_2001-12-02.py\"\>",
+    ",", "\<\"ISACCNR_2002-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_2003-12-02.py\"\>", ",", "\<\"ISACCNR_2004-12-02.py\"\>",
+    ",", "\<\"ISACCNR_2005-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_2006-12-02.py\"\>", ",", "\<\"ISACCNR_2007-12-02.py\"\>",
+    ",", "\<\"ISACCNR_2008-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_2009-12-02.py\"\>", 
+   ",", "\<\"ISACCNR_2010-12-02.py\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.714316083413899*^9, 3.714316116503029*^9}, {
+  3.714316287920443*^9, 
+  3.714316346116362*^9}},ExpressionUUID->"61f64218-57ab-4e3e-8fa7-\
+485bd155b2e6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"d869dde3-9a73-4768-96f8-4b3b776d9a0a"],
+
+Cell[CellGroupData[{
+
+Cell["ECCC", "Subchapter",
+ CellChangeTimes->{{3.7143351626865273`*^9, 
+  3.714335163301734*^9}},ExpressionUUID->"21b87add-02d4-4da0-86f1-\
+932b3d69b6e4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", "\"\</Users/lambda/Documents/S2S/Data/ECCC\>\"",
+   "]"}]], "Code",
+ CellChangeTimes->{{3.714264447662509*^9, 3.714264462267906*^9}, {
+  3.71426664587824*^9, 3.7142666465164633`*^9}, {3.7142683024036083`*^9, 
+  3.714268302849687*^9}, {3.71426873664198*^9, 3.7142687391780233`*^9}, {
+  3.714269353512988*^9, 3.714269353848917*^9}, {3.7143111811694393`*^9, 
+  3.7143111846546183`*^9}, {3.7143118859541273`*^9, 3.7143118868980293`*^9}, {
+  3.714335166973777*^9, 
+  3.7143351675821257`*^9}},ExpressionUUID->"b5ac26e3-3e28-4e6b-a8ed-\
+c0681aace121"],
+
+Cell[BoxData["\<\"/Users/lambda/Documents/S2S/Data/ECCC\"\>"], "Output",
+ CellChangeTimes->{3.714311185068245*^9, 3.714311887702276*^9, 
+  3.7143129116673927`*^9, 
+  3.714335168057925*^9},ExpressionUUID->"6914508c-8ea6-4dd3-92e9-\
+b2836c55e8cf"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"ECCCGenerator", "[", "date_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"content", "=", "\n", 
+       RowBox[{
+       "\"\<#!/usr/bin/env python\nfrom ecmwfapi import ECMWFDataServer\n\
+server = ECMWFDataServer()\nserver.retrieve({\n    \\\"class\\\": \\\"s2\\\",\
+\n    \\\"dataset\\\": \\\"s2s\\\",\n    \\\"date\\\": \\\"2016\>\"", "<>", 
+        RowBox[{"StringTake", "[", 
+         RowBox[{"date", ",", 
+          RowBox[{"{", 
+           RowBox[{"5", ",", 
+            RowBox[{"-", "1"}]}], "}"}]}], "]"}], "<>", 
+        "\"\<\\\",\n    \\\"expver\\\": \\\"prod\\\",\n    \\\"hdate\\\": \
+\\\"\>\"", "<>", "date", "<>", 
+        "\"\<\\\",\n    \\\"levtype\\\": \\\"sfc\\\",\n    \\\"model\\\": \
+\\\"glob\\\",\n    \\\"number\\\": \\\"1/2/3\\\",\n    \\\"origin\\\": \
+\\\"cwao\\\",\n    \\\"param\\\": \\\"151/228228\\\",\n    \\\"step\\\": \
+\\\"0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/432/456/\
+480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/888/912/\
+936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/1272/1296/\
+1320/1344/1368/1392/1416/1440/1464\\\",\n    \\\"stream\\\": \\\"enfh\\\",\n\t\
+\\\"time\\\": \\\"00:00:00\\\",\n    \\\"type\\\": \\\"pf\\\",\n    \
+\\\"target\\\": \\\"ECCC_\>\"", "<>", "date", "<>", 
+        "\"\<.nc\\\",\n    \\\"format\\\": \\\"netcdf\\\",\n})\>\""}]}], 
+      "}"}], ",", "\n", "\t", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"\"\<ECCC_\>\"", "<>", "date", "<>", "\"\<.py\>\""}], ",", 
+       "content", ",", "\"\<String\>\""}], "]"}]}], "]"}]}], ";"}]], "Code",
+ CellChangeTimes->{{3.714268237286971*^9, 3.7142682925959997`*^9}, {
+  3.714268450774735*^9, 3.714268485709058*^9}, {3.71426874339454*^9, 
+  3.714268746376237*^9}, {3.714268826712167*^9, 3.714268876815598*^9}, {
+  3.714268932973222*^9, 3.714268958463032*^9}, {3.7142694304178267`*^9, 
+  3.714269499205832*^9}, {3.714269540070834*^9, 3.714269540412923*^9}, {
+  3.714269627119279*^9, 3.7142696299574947`*^9}, {3.714311196057495*^9, 
+  3.714311271797688*^9}, {3.7143118950997353`*^9, 3.714311896267321*^9}, {
+  3.71431201033707*^9, 3.714312071422855*^9}, {3.714312845503345*^9, 
+  3.714312861487829*^9}, {3.714313015585009*^9, 3.714313015991568*^9}, {
+  3.714335171134245*^9, 3.714335171743246*^9}, {3.714335238006034*^9, 
+  3.714335268435504*^9}, {3.714335409222711*^9, 
+  3.714335409460237*^9}},ExpressionUUID->"c7f116fb-46fd-4051-a187-\
+eba1d899ff68"],
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"ECCCGenerator", "[", 
+    RowBox[{
+     RowBox[{"ToString", "[", "year", "]"}], "<>", "\"\<-12-01\>\""}], "]"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"year", ",", "1995", ",", "2014"}], "}"}]}], "]"}]], "Code",
+ CellChangeTimes->{{3.714335271123402*^9, 
+  3.7143354437630033`*^9}},ExpressionUUID->"e1d89104-dd4e-4359-9ae1-\
+e2084b88459b"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"9e047087-02ac-462a-bb0a-33c794d5c452"],
+
+Cell[CellGroupData[{
+
+Cell["KMA", "Subchapter",
+ CellChangeTimes->{{3.7143356866051903`*^9, 
+  3.714335690315014*^9}},ExpressionUUID->"9b5b362e-bab9-46f0-ba0d-\
+3d812d4da3bc"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
+  "python"}], "\n", 
+ RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
+  "ECMWFDataServer"}], "\n", 
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"ECMWFDataServer", 
+   RowBox[{"(", ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"server", ".", "retrieve"}], 
+  RowBox[{"(", 
+   RowBox[{"{", "\n", "    ", 
+    RowBox[{
+     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2017-09-01\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<1991-09-01\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<sfc\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<number\>\"", ":", " ", "\"\<1/2\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<rksl\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<param\>\"", ":", " ", "\"\<151\>\""}], ",", "\n", "    ", 
+     RowBox[{
+     "\"\<step\>\"", ":", " ", 
+      "\"\<24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
+432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
+888/912/936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/\
+1272/1296/1320/1344/1368/1392/1416/1440\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{"\"\<type\>\"", ":", " ", "\"\<pf\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
+    "}"}], ")"}]}]}], "Code",
+ CellChangeTimes->{{3.714335676994924*^9, 
+  3.714335676998056*^9}},ExpressionUUID->"dc785361-9e15-4a3b-b38f-\
+2f2f37aea8e5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"32281aa1-a699-43a7-9f7d-7043e5c64afe"],
+
+Cell[BoxData[""], "Code",ExpressionUUID->"349bebb3-7b26-4a82-9f7b-77d48ab5aff1"],
+
+Cell[CellGroupData[{
+
+Cell["UKMO", "Subchapter",
+ CellChangeTimes->{{3.7143247896816483`*^9, 
+  3.714324790576716*^9}},ExpressionUUID->"092be517-25d2-43e2-8554-\
+c16c13f1557d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1993", ",", "2015"}], "}"}], ",", "{"}]}]], "Code",
+ CellChangeTimes->{{3.714324846729391*^9, 
+  3.7143248681814947`*^9}},ExpressionUUID->"7b299d5f-506a-4315-8811-\
+76cb7667854e"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"#", "!"}], "/", "usr"}], "/", "bin"}], "/", "env"}], " ", 
+  "python"}], "\n", 
+ RowBox[{"from", " ", "ecmwfapi", " ", "import", " ", 
+  "ECMWFDataServer"}], "\n", 
+ RowBox[{"server", " ", "=", " ", 
+  RowBox[{"ECMWFDataServer", 
+   RowBox[{"(", ")"}]}]}], "\n", 
+ RowBox[{
+  RowBox[{"server", ".", "retrieve"}], 
+  RowBox[{"(", 
+   RowBox[{"{", "\n", "    ", 
+    RowBox[{
+     RowBox[{"\"\<class\>\"", ":", " ", "\"\<s2\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<dataset\>\"", ":", " ", "\"\<s2s\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<date\>\"", ":", " ", "\"\<2017-01-01\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{"\"\<expver\>\"", ":", " ", "\"\<prod\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<hdate\>\"", ":", " ", "\"\<1993-01-01\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{
+     "\"\<levelist\>\"", ":", " ", 
+      "\"\<10/50/100/200/300/500/700/850/925/1000\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<levtype\>\"", ":", " ", "\"\<pl\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<model\>\"", ":", " ", "\"\<glob\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<number\>\"", ":", " ", "\"\<1/2\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<origin\>\"", ":", " ", "\"\<egrr\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<param\>\"", ":", " ", "\"\<156\>\""}], ",", "\n", "    ", 
+     RowBox[{
+     "\"\<step\>\"", ":", " ", 
+      "\"\<0/24/48/72/96/120/144/168/192/216/240/264/288/312/336/360/384/408/\
+432/456/480/504/528/552/576/600/624/648/672/696/720/744/768/792/816/840/864/\
+888/912/936/960/984/1008/1032/1056/1080/1104/1128/1152/1176/1200/1224/1248/\
+1272/1296/1320/1344/1368/1392/1416/1440\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<stream\>\"", ":", " ", "\"\<enfh\>\""}], ",", "\n", "    ", 
+     
+     RowBox[{"\"\<time\>\"", ":", " ", "\"\<00:00:00\>\""}], ",", "\n", 
+     "    ", 
+     RowBox[{"\"\<type\>\"", ":", " ", "\"\<pf\>\""}], ",", "\n", "    ", 
+     RowBox[{"\"\<target\>\"", ":", " ", "\"\<output\>\""}], ","}], "\n", 
+    "}"}], ")"}]}]}], "Code",
+ CellChangeTimes->{
+  3.7143247917178288`*^9},ExpressionUUID->"e6c53694-1cf2-45fe-91bc-\
+960f074d163e"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -4569,19 +5237,31 @@ CellTagsIndex->{
   75, "SlideShowNavigationBar", "ExpressionUUID" -> "
    23b94830-026b-4002-8a80-132a8b31101e",
    CellTags->"SlideShowHeader"],
-  Cell[5435, 137, 122, 2, 
+  Cell[5484, 138, 122, 2, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "
    8819f24e-2ff2-439e-9c08-3e09a58a3274",
    CellTags->"SlideShowHeader"],
-  Cell[10488, 281, 122, 2, 
+  Cell[10537, 282, 122, 2, 
   74, "SlideShowNavigationBar", "ExpressionUUID" -> "f619320b-
    b634-4e0f-96e7-69506ee7764e",
+   CellTags->"SlideShowHeader"],
+  Cell[280505, 4983, 122, 2, 
+  74, "SlideShowNavigationBar", "ExpressionUUID" -> "
+   d869dde3-9a73-4768-96f8-4b3b776d9a0a",
+   CellTags->"SlideShowHeader"],
+  Cell[284670, 5080, 122, 2, 
+  74, "SlideShowNavigationBar", "ExpressionUUID" -> "9e047087-02ac-462a-
+   bb0a-33c794d5c452",
+   CellTags->"SlideShowHeader"],
+  Cell[287122, 5145, 122, 2, 
+  74, "SlideShowNavigationBar", "ExpressionUUID" -> "32281aa1-
+   a699-43a7-9f7d-7043e5c64afe",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 260991, 4566}
+ {"SlideShowHeader", 290408, 5234}
  }
 *)
 (*NotebookFileOutline
@@ -4592,135 +5272,240 @@ Cell[422, 15, 4399, 98, 75, "SlideShowNavigationBar", "ExpressionUUID" -> \
  CellTags->"SlideShowHeader"],
 Cell[4824, 115, 184, 4, 311, "Title", "ExpressionUUID" -> \
 "9de4e19e-3842-46a5-9e11-83b04819207e"],
-Cell[5011, 121, 176, 3, 115, "Subtitle", "ExpressionUUID" -> \
+Cell[5011, 121, 225, 4, 115, "Subtitle", "ExpressionUUID" -> \
 "e115a166-edad-4189-ae7d-23f1fd984060"],
-Cell[5190, 126, 208, 6, 93, "Text", "ExpressionUUID" -> \
+Cell[5239, 127, 208, 6, 93, "Text", "ExpressionUUID" -> \
 "44fc297c-5571-4683-b3eb-b49a109a597b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5435, 137, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[5484, 138, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "8819f24e-2ff2-439e-9c08-3e09a58a3274",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[5582, 143, 305, 7, 194, "Section", "ExpressionUUID" -> \
+Cell[5631, 144, 305, 7, 194, "Section", "ExpressionUUID" -> \
 "e660fb7c-7d60-410a-9784-9ab87c0c9c0f"],
-Cell[5890, 152, 840, 18, 549, "Text", "ExpressionUUID" -> \
+Cell[5939, 153, 840, 18, 549, "Text", "ExpressionUUID" -> \
 "2cb67296-bd62-4b53-92c8-d8c0b13c3f30"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6767, 175, 158, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[6816, 176, 158, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "f32b23d8-b0b9-4f96-84c5-032ac32e1e98"],
 Cell[CellGroupData[{
-Cell[6950, 182, 224, 5, 53, "Item", "ExpressionUUID" -> \
+Cell[6999, 183, 224, 5, 53, "Item", "ExpressionUUID" -> \
 "b3749365-4683-4da2-89da-a8a6b2584f78"],
-Cell[7177, 189, 154, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[7226, 190, 154, 3, 49, "Subitem", "ExpressionUUID" -> \
 "c02572e5-9a3a-4dff-82f5-2a6445ab5616"],
-Cell[7334, 194, 195, 3, 53, "Item", "ExpressionUUID" -> \
+Cell[7383, 195, 195, 3, 53, "Item", "ExpressionUUID" -> \
 "f7c52678-169d-4970-8c9e-ebc1aa541a08"],
-Cell[7532, 199, 160, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[7581, 200, 160, 3, 49, "Subitem", "ExpressionUUID" -> \
 "fbb13ee3-f042-4a32-b347-e41da24aa781"],
-Cell[7695, 204, 422, 10, 90, "Item", "ExpressionUUID" -> \
+Cell[7744, 205, 422, 10, 90, "Item", "ExpressionUUID" -> \
 "905a720f-f8bb-4e51-b56a-62b8ee07b155"],
-Cell[8120, 216, 152, 3, 49, "Subitem", "ExpressionUUID" -> \
+Cell[8169, 217, 152, 3, 49, "Subitem", "ExpressionUUID" -> \
 "f5afd4da-181b-45f1-a6b3-c8c5db1a64bc"]
 }, Open  ]],
-Cell[8287, 222, 269, 5, 55, "Text", "ExpressionUUID" -> \
+Cell[8336, 223, 269, 5, 55, "Text", "ExpressionUUID" -> \
 "f6a86f0c-ed12-4f46-b717-721998341dfa"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8593, 232, 190, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[8642, 233, 190, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "d70d49c1-8c37-4aff-9858-15e616d84d32"],
-Cell[8786, 237, 691, 11, 207, "Text", "ExpressionUUID" -> \
+Cell[8835, 238, 691, 11, 207, "Text", "ExpressionUUID" -> \
 "fc7ea842-66b0-4541-aba2-88262a96d384"],
 Cell[CellGroupData[{
-Cell[9502, 252, 268, 6, 89, "Item", "ExpressionUUID" -> \
+Cell[9551, 253, 268, 6, 89, "Item", "ExpressionUUID" -> \
 "53040baf-6f7f-4c97-9b35-ff019f8f37a9"],
-Cell[9773, 260, 153, 3, 53, "Item", "ExpressionUUID" -> \
+Cell[9822, 261, 153, 3, 53, "Item", "ExpressionUUID" -> \
 "8ccaff01-300a-46ce-b13f-4eebb2661ecc"]
 }, Open  ]],
-Cell[9941, 266, 498, 9, 169, "Text", "ExpressionUUID" -> \
+Cell[9990, 267, 498, 9, 169, "Text", "ExpressionUUID" -> \
 "724eaa97-e5fd-4eab-995c-047ff954ad73"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10488, 281, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+Cell[10537, 282, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
 "f619320b-b634-4e0f-96e7-69506ee7764e",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[10635, 287, 306, 5, 123, "Section", "ExpressionUUID" -> \
+Cell[10684, 288, 306, 5, 123, "Section", "ExpressionUUID" -> \
 "1cddc845-c4ab-4299-81ae-e02e2ed36602"],
-Cell[10944, 294, 230639, 3789, 679, "Input", "ExpressionUUID" -> \
+Cell[10993, 295, 230639, 3789, 679, "Input", "ExpressionUUID" -> \
 "3da5841b-88fe-4ef7-899a-34dbb69d1254"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[241620, 4088, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[241669, 4089, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "5407e6b1-4481-4bbd-896f-30a1a8493c37"],
 Cell[CellGroupData[{
-Cell[241798, 4095, 232, 5, 70, "Code", "ExpressionUUID" -> \
+Cell[241847, 4096, 232, 5, 70, "Code", "ExpressionUUID" -> \
 "7b906a1b-f094-423e-a3c5-c26416156093"],
-Cell[242033, 4102, 169, 3, 47, "Output", "ExpressionUUID" -> \
+Cell[242082, 4103, 169, 3, 47, "Output", "ExpressionUUID" -> \
 "7687c35e-496e-424a-8bdb-d7f7f23ee5c7"]
 }, Open  ]],
-Cell[242217, 4108, 1793, 33, 775, "Code", "ExpressionUUID" -> \
+Cell[242266, 4109, 1793, 33, 775, "Code", "ExpressionUUID" -> \
 "c110c8b0-65ca-454d-a654-652fb869720b"],
-Cell[244013, 4143, 1212, 31, 103, "Code", "ExpressionUUID" -> \
+Cell[244062, 4144, 1212, 31, 103, "Code", "ExpressionUUID" -> \
 "caa6e5c4-f024-49d2-8e6b-40908eb49195"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[245262, 4179, 151, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[245311, 4180, 151, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "64e985d2-e208-4431-921b-d47a08bfa3c5"],
 Cell[CellGroupData[{
-Cell[245438, 4186, 286, 6, 70, "Code", "ExpressionUUID" -> \
+Cell[245487, 4187, 286, 6, 70, "Code", "ExpressionUUID" -> \
 "5c7743b6-368f-463a-96dc-05b07beb79ec"],
-Cell[245727, 4194, 195, 3, 47, "Output", "ExpressionUUID" -> \
+Cell[245776, 4195, 195, 3, 47, "Output", "ExpressionUUID" -> \
 "6a689417-f5c2-4deb-a54b-961522a8a2c7"]
 }, Open  ]],
-Cell[245937, 4200, 1875, 35, 775, "Code", "ExpressionUUID" -> \
+Cell[245986, 4201, 1875, 35, 775, "Code", "ExpressionUUID" -> \
 "2a89cfc9-e785-4864-bfa3-cab5f9bcec1c"],
-Cell[247815, 4237, 1266, 32, 103, "Code", "ExpressionUUID" -> \
+Cell[247864, 4238, 1266, 32, 103, "Code", "ExpressionUUID" -> \
 "2174b5d0-c934-4a95-ba7c-c41323e7909b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[249118, 4274, 152, 3, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[249167, 4275, 152, 3, 63, "Subchapter", "ExpressionUUID" -> \
 "f7de2867-142d-4982-b436-f9c2c18d2664"],
 Cell[CellGroupData[{
-Cell[249295, 4281, 335, 6, 70, "Code", "ExpressionUUID" -> \
+Cell[249344, 4282, 335, 6, 70, "Code", "ExpressionUUID" -> \
 "266c0b90-a844-40ef-b2ad-3a87626af47c"],
-Cell[249633, 4289, 198, 3, 47, "Output", "ExpressionUUID" -> \
+Cell[249682, 4290, 198, 3, 47, "Output", "ExpressionUUID" -> \
 "5d536362-bdf0-4cc8-a03a-2b7587e3f2e2"]
 }, Open  ]],
-Cell[249846, 4295, 1573, 31, 775, "Code", "ExpressionUUID" -> \
+Cell[249895, 4296, 1573, 31, 775, "Code", "ExpressionUUID" -> \
 "d77d79e7-663d-4ef9-b7dc-5a12a3f8de34"],
-Cell[251422, 4328, 1068, 29, 103, "Code", "ExpressionUUID" -> \
+Cell[251471, 4329, 1117, 30, 103, "Code", "ExpressionUUID" -> \
 "b876c68d-3f21-4847-983c-8865c382e106"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[252527, 4362, 212, 4, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[252625, 4364, 212, 4, 63, "Subchapter", "ExpressionUUID" -> \
 "d4d2f6c5-c3b3-4478-a245-3d6d0d4a5af8"],
 Cell[CellGroupData[{
-Cell[252764, 4370, 392, 7, 70, "Code", "ExpressionUUID" -> \
+Cell[252862, 4372, 392, 7, 70, "Code", "ExpressionUUID" -> \
 "6c4d9626-6883-4e20-8265-f6d91dad8196"],
-Cell[253159, 4379, 230, 3, 47, "Output", "ExpressionUUID" -> \
+Cell[253257, 4381, 230, 3, 47, "Output", "ExpressionUUID" -> \
 "ca0c3394-4ed9-4e2e-835f-b22d97e039fd"]
 }, Open  ]],
-Cell[253404, 4385, 1855, 35, 775, "Code", "ExpressionUUID" -> \
+Cell[253502, 4387, 1855, 35, 775, "Code", "ExpressionUUID" -> \
 "8ff2faf9-d644-4e59-afa0-9570deaaed59"],
-Cell[255262, 4422, 1183, 30, 103, "Code", "ExpressionUUID" -> \
+Cell[255360, 4424, 1183, 30, 103, "Code", "ExpressionUUID" -> \
 "f0d1cc8b-44b4-4f26-8e6e-ec7a77181a12"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[256482, 4457, 254, 4, 63, "Subchapter", "ExpressionUUID" -> \
+Cell[256580, 4459, 254, 4, 63, "Subchapter", "ExpressionUUID" -> \
 "779d43bf-b625-44a5-b4a3-efa745b5ff0f"],
 Cell[CellGroupData[{
-Cell[256761, 4465, 433, 8, 70, "Code", "ExpressionUUID" -> \
+Cell[256859, 4467, 433, 8, 70, "Code", "ExpressionUUID" -> \
 "75a78e7c-a7e4-44ee-b5d5-a4517b971323"],
-Cell[257197, 4475, 248, 4, 47, "Output", "ExpressionUUID" -> \
+Cell[257295, 4477, 248, 4, 47, "Output", "ExpressionUUID" -> \
 "fa7188ee-8e6c-4192-a4ff-548b04e8f634"]
 }, Open  ]],
-Cell[257460, 4482, 1819, 34, 775, "Code", "ExpressionUUID" -> \
+Cell[257558, 4484, 1819, 34, 775, "Code", "ExpressionUUID" -> \
 "7c8f6583-1fb7-4a2b-9dd5-a016c80720f1"],
-Cell[259282, 4518, 1263, 31, 103, "Code", "ExpressionUUID" -> \
+Cell[259380, 4520, 1263, 31, 103, "Code", "ExpressionUUID" -> \
 "cf7be598-9024-43b0-8fe7-7aca54a6ffca"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[260680, 4556, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"54fd2137-35dd-4cad-be8b-df6efb53356d"],
+Cell[CellGroupData[{
+Cell[260858, 4563, 485, 8, 70, "Code", "ExpressionUUID" -> \
+"035cbb0c-24cf-47bd-8dc7-fee4c7403bbd"],
+Cell[261346, 4573, 175, 3, 47, "Output", "ExpressionUUID" -> \
+"1e154e4d-b08b-4a08-96f1-bcb89c51fe15"]
+}, Open  ]],
+Cell[261536, 4579, 2286, 43, 775, "Code", "ExpressionUUID" -> \
+"f1eb07c6-150e-44d6-86e1-76f2017268a9"],
+Cell[CellGroupData[{
+Cell[263847, 4626, 741, 16, 70, "Code", "ExpressionUUID" -> \
+"6ab8ae77-6a1f-45eb-8e92-c076c257ad24"],
+Cell[264591, 4644, 1147, 18, 144, "Output", "ExpressionUUID" -> \
+"3f081681-1787-4f8b-b071-2c03846fd9b7"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[265787, 4668, 203, 4, 63, "Subchapter", "ExpressionUUID" -> \
+"0954bc72-9298-467f-b30d-d230b258cde6"],
+Cell[CellGroupData[{
+Cell[266015, 4676, 537, 9, 70, "Code", "ExpressionUUID" -> \
+"1f8bd330-e391-4fdc-94ed-6cd3d088f3e8"],
+Cell[266555, 4687, 220, 3, 47, "Output", "ExpressionUUID" -> \
+"7eadf5fe-74ec-4ce7-91e3-c76b098cee19"]
+}, Open  ]],
+Cell[266790, 4693, 2405, 45, 775, "Code", "ExpressionUUID" -> \
+"370d6fb0-35db-4e21-bd51-01b69b6fa07c"],
+Cell[CellGroupData[{
+Cell[269220, 4742, 1427, 39, 199, "Code", "ExpressionUUID" -> \
+"9fc787ec-8881-4c9d-bf0f-21ede1b976fe"],
+Cell[270650, 4783, 1266, 20, 208, "Output", "ExpressionUUID" -> \
+"e05c8794-ee4c-41c2-9cfc-ed111f6d8738"],
+Cell[271919, 4805, 1266, 20, 208, "Output", "ExpressionUUID" -> \
+"c8aa9caf-99f5-4f67-a4a2-97bb1cf1760e"],
+Cell[273188, 4827, 1266, 20, 208, "Output", "ExpressionUUID" -> \
+"8272c922-042c-4498-994c-bf64846cfe34"],
+Cell[274457, 4849, 1264, 20, 208, "Output", "ExpressionUUID" -> \
+"10f1d7cf-f35b-4714-a283-5894c25f08db"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[275770, 4875, 158, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"ea55f13e-ed6c-4fd0-a10f-42fc86e891bc"],
+Cell[CellGroupData[{
+Cell[275953, 4882, 592, 10, 70, "Code", "ExpressionUUID" -> \
+"70dcf19e-26a4-465b-ac76-cad088ccef7c"],
+Cell[276548, 4894, 271, 4, 47, "Output", "ExpressionUUID" -> \
+"5c2c3a62-b833-4c52-8d86-4a08b91db861"]
+}, Open  ]],
+Cell[276834, 4901, 1684, 31, 743, "Code", "ExpressionUUID" -> \
+"f3063fdd-fbe5-4ca2-a7d0-7ec4c9477521"],
+Cell[CellGroupData[{
+Cell[278543, 4936, 450, 12, 70, "Code", "ExpressionUUID" -> \
+"95a6e7ea-88e8-4f65-948c-5dd433c76507"],
+Cell[278996, 4950, 1448, 26, 272, "Output", "ExpressionUUID" -> \
+"61f64218-57ab-4e3e-8fa7-485bd155b2e6"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[280505, 4983, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+"d869dde3-9a73-4768-96f8-4b3b776d9a0a",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[280652, 4989, 154, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"21b87add-02d4-4da0-86f1-932b3d69b6e4"],
+Cell[CellGroupData[{
+Cell[280831, 4996, 588, 10, 70, "Code", "ExpressionUUID" -> \
+"b5ac26e3-3e28-4e6b-a8ed-c0681aace121"],
+Cell[281422, 5008, 245, 4, 47, "Output", "ExpressionUUID" -> \
+"6914508c-8ea6-4dd3-92e9-b2836c55e8cf"]
+}, Open  ]],
+Cell[281682, 5015, 2535, 46, 775, "Code", "ExpressionUUID" -> \
+"c7f116fb-46fd-4051-a187-eba1d899ff68"],
+Cell[284220, 5063, 401, 11, 70, "Code", "ExpressionUUID" -> \
+"e1d89104-dd4e-4359-9ae1-e2084b88459b"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[284670, 5080, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> \
+"9e047087-02ac-462a-bb0a-33c794d5c452",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[284817, 5086, 153, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"9b5b362e-bab9-46f0-ba0d-3d812d4da3bc"],
+Cell[284973, 5091, 2100, 48, 679, "Code", "ExpressionUUID" -> \
+"dc785361-9e15-4a3b-b38f-2f2f37aea8e5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[287122, 5145, 122, 2, 74, "SlideShowNavigationBar", "ExpressionUUID" -> "
+ 32281aa1-a699-43a7-9f7d-7043e5c64afe",
+ CellTags->"SlideShowHeader"],
+Cell[287247, 5149, 80, 0, 70, "Code", "ExpressionUUID" -> \
+"349bebb3-7b26-4a82-9f7b-77d48ab5aff1"],
+Cell[CellGroupData[{
+Cell[287352, 5153, 154, 3, 63, "Subchapter", "ExpressionUUID" -> \
+"092be517-25d2-43e2-8554-c16c13f1557d"],
+Cell[287509, 5158, 249, 7, 70, "Code", "ExpressionUUID" -> \
+"7b299d5f-506a-4315-8811-76cb7667854e"],
+Cell[287761, 5167, 2201, 50, 711, "Code", "ExpressionUUID" -> \
+"e6c53694-1cf2-45fe-91bc-960f074d163e"]
 }, Open  ]]
 }, Open  ]]
 }
