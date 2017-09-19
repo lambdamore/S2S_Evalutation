@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     50986,       1144]
-NotebookOptionsPosition[     47702,       1073]
-NotebookOutlinePosition[     48634,       1101]
-CellTagsIndexPosition[     48555,       1096]
+NotebookDataLength[     51722,       1163]
+NotebookOptionsPosition[     48019,       1085]
+NotebookOutlinePosition[     49097,       1115]
+CellTagsIndexPosition[     49018,       1110]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1069,6 +1069,18 @@ Cell[BoxData[
    3.71475802068556*^9}},ExpressionUUID->"299fabd2-e438-4b36-84c5-\
 25323165317e"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"e75e123b-c675-48e3-80ef-c8ca4a4cf471"],
+
+Cell["Comparison", "Section",
+ CellChangeTimes->{{3.714784640152093*^9, 
+  3.714784641910844*^9}},ExpressionUUID->"4c493ae4-51d5-42ec-ad04-\
+e571dc28b508"]
 }, Open  ]]
 },
 WindowSize->{Full, Full},
@@ -1090,12 +1102,14 @@ CellTagsIndex->{
   Cell[5428, 139, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"b05df5d8-bae6-4c57-a784-efe6035c3b52",
    CellTags->"SlideShowHeader"],
   Cell[44496, 995, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"4263b167-493d-4355-afff-9ff2a71d4072",
+   CellTags->"SlideShowHeader"],
+  Cell[47723, 1075, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e75e123b-c675-48e3-80ef-c8ca4a4cf471",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 48098, 1086}
+ {"SlideShowHeader", 48415, 1098}
  }
 *)
 (*NotebookFileOutline
@@ -1145,6 +1159,11 @@ Cell[CellGroupData[{
 Cell[44643, 1001, 151, 3, 123, "Section",ExpressionUUID->"98de1f9a-4c7c-4dd8-8659-184cce8b6907"],
 Cell[44797, 1006, 2877, 63, 295, "Code",ExpressionUUID->"299fabd2-e438-4b36-84c5-25323165317e"]
 }, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47723, 1075, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e75e123b-c675-48e3-80ef-c8ca4a4cf471",
+ CellTags->"SlideShowHeader"],
+Cell[47848, 1079, 155, 3, 123, "Section",ExpressionUUID->"4c493ae4-51d5-42ec-ad04-e571dc28b508"]
 }, Open  ]]
 }
 ]
