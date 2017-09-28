@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48295,        984]
-NotebookOptionsPosition[     45612,        926]
-NotebookOutlinePosition[     46543,        954]
-CellTagsIndexPosition[     46465,        949]
+NotebookDataLength[     57594,       1220]
+NotebookOptionsPosition[     54810,       1161]
+NotebookOutlinePosition[     55742,       1189]
+CellTagsIndexPosition[     55663,       1184]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -602,9 +602,10 @@ vpnGexyTfFY6Clzy4uXJKN/wIdzeWAScPmI3eQutf1YyStQQDdyaOlpFnvZb
     240.181764, 33.9598665}, {240.081979, 34.0776795}, {240.3623997, 
     34.0132082}, {240.4366994, 34.0558772}, {240.4795749, 34.034075}, {
     240.4466304, 34.0001722}, {240.44652231372902`, 34.}}}]]], "Output",
- CellChangeTimes->{{3.71553235894007*^9, 
-  3.715532390571497*^9}},ExpressionUUID->"c6596e7a-1962-424c-8a71-\
-eaa9736aaaef"]
+ CellChangeTimes->{{3.71553235894007*^9, 3.715532390571497*^9}, 
+   3.715545135578636*^9, 
+   3.7155462042080317`*^9},ExpressionUUID->"bbe04255-be01-42ef-b52e-\
+d2b544352aac"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -614,6 +615,231 @@ Cell[CellGroupData[{
 Cell["", "SlideShowNavigationBar",
  CellTags->
   "SlideShowHeader",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"dataset", "=", "\"\<ECCC\>\""}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"\"\</Volumes/lambda/Data/S2S/Control/\>\"", "<>", "dataset"}], 
+   "]"}], ";"}], "\n", 
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"sample", "=", 
+    RowBox[{
+     RowBox[{"FileNames", "[", "\"\<*.nc\>\"", "]"}], "[", 
+     RowBox[{"[", "1", "]"}], "]"}]}], ";"}]}], "\n", 
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"points", "=", 
+    RowBox[{"Block", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+       "s2sprecip", ",", "s2slat", ",", "s2slon", ",", "s2stime", ",", "p", 
+        ",", "indexes"}], "}"}], ",", "\n", "\t", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"s2sprecip", ",", "s2slat", ",", "s2slon", ",", "s2stime"}], 
+         "}"}], "=", 
+        RowBox[{"Map", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Import", "[", 
+            RowBox[{"sample", ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Datasets\>\"", ",", "#"}], "}"}]}], "]"}], "&"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<tp\>\"", ",", "\"\<latitude\>\"", ",", "\"\<longitude\>\"", 
+            ",", "\"\<time\>\""}], "}"}]}], "]"}]}], ";", "\n", "    ", 
+       RowBox[{"p", "=", 
+        RowBox[{"Block", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"InOrOut", ",", "grids"}], "}"}], ",", "\n", "        ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"InOrOut", "[", "point_", "]"}], ":=", 
+            RowBox[{"Block", "[", 
+             RowBox[{
+              RowBox[{"{", "singletest", "}"}], ",", "\n", "\t\t\t", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"singletest", "[", "poly_", "]"}], " ", ":=", " ", 
+                RowBox[{
+                 RowBox[{"Round", "[", 
+                  RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Total", "@", " ", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"#", " ", "-", " ", 
+                    RowBox[{"RotateRight", "[", "#", "]"}]}], ")"}], " ", 
+                    "&"}], "@", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"ArcTan", " ", "@@", " ", 
+                    RowBox[{"(", 
+                    RowBox[{"point", " ", "-", " ", "#"}], ")"}]}], " ", 
+                    "&"}], " ", "/@", " ", "poly"}], ")"}]}], ",", " ", 
+                    RowBox[{"2", " ", "Pi"}], ",", " ", 
+                    RowBox[{"-", "Pi"}]}], "]"}]}], "/", "2"}], "/", "Pi"}], 
+                   ")"}], "]"}], " ", "!=", " ", "0"}]}], ";", "\n", "\t\t\t", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"Map", "[", 
+                  RowBox[{"singletest", ",", "polygon"}], "]"}], ")"}], "/.", 
+                
+                RowBox[{"List", "\[Rule]", "Or"}]}]}]}], "]"}]}], ";", "\n", 
+           "        ", 
+           RowBox[{"grids", "=", 
+            RowBox[{"Block", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"scope", "=", 
+                 RowBox[{"Map", "[", 
+                  RowBox[{"MinMax", ",", 
+                   RowBox[{"Transpose", "[", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"polygon", ",", "1"}], "]"}], "]"}]}], "]"}]}], 
+                ",", "lat", ",", "lon"}], "}"}], ",", "\n", "            ", 
+              RowBox[{
+               RowBox[{"lat", "=", 
+                RowBox[{"Select", "[", 
+                 RowBox[{"s2slat", ",", 
+                  RowBox[{
+                   RowBox[{"And", "[", 
+                    RowBox[{
+                    RowBox[{"#", "<=", 
+                    RowBox[{"scope", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "2"}], "]"}], "]"}]}], ",", " ", 
+                    RowBox[{"#", ">=", 
+                    RowBox[{"scope", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "1"}], "]"}], "]"}]}]}], "]"}], "&"}]}],
+                  "]"}]}], ";", "\n", "            ", 
+               RowBox[{"lon", "=", 
+                RowBox[{"Select", "[", 
+                 RowBox[{"s2slon", ",", 
+                  RowBox[{
+                   RowBox[{"And", "[", 
+                    RowBox[{
+                    RowBox[{"#", "<=", 
+                    RowBox[{"scope", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ",", " ", 
+                    RowBox[{"#", ">=", 
+                    RowBox[{"scope", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "]"}], "&"}]}],
+                  "]"}]}], ";", "\n", "        ", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Table", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"lat", "[", 
+                    RowBox[{"[", "i", "]"}], "]"}], ",", 
+                    RowBox[{"lon", "[", 
+                    RowBox[{"[", "j", "]"}], "]"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"j", ",", 
+                    RowBox[{"Length", "[", "lon", "]"}]}], "}"}]}], "]"}], 
+                 ",", 
+                 RowBox[{"{", 
+                  RowBox[{"i", ",", 
+                   RowBox[{"Length", "[", "lat", "]"}]}], "}"}]}], "]"}]}]}], 
+             "]"}]}], ";", "\n", "        ", 
+           RowBox[{"Select", "[", 
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"grids", ",", "1"}], "]"}], ",", 
+             RowBox[{
+              RowBox[{"InOrOut", "[", 
+               RowBox[{"Reverse", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+         "]"}]}], ";", "\n", "    ", 
+       RowBox[{"indexes", "=", 
+        RowBox[{"Block", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"grids", "=", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"s2slat", "[", 
+                   RowBox[{"[", "i", "]"}], "]"}], ",", 
+                  RowBox[{"s2slon", "[", 
+                   RowBox[{"[", "j", "]"}], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"j", ",", 
+                  RowBox[{"Length", "[", "s2slon", "]"}]}], "}"}]}], "]"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", 
+                RowBox[{"Length", "[", "s2slat", "]"}]}], "}"}]}], "]"}]}], 
+           "}"}], ",", "\n", "        ", 
+          RowBox[{"Map", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Position", "[", 
+               RowBox[{"grids", ",", "#"}], "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "&"}], ",", "p"}], "]"}]}], 
+         "]"}]}], ";", "\n", "    ", "indexes"}]}], "]"}]}], ";"}]}], "\n", 
+ RowBox[{" ", 
+  RowBox[{
+   RowBox[{"files", "=", 
+    RowBox[{"FileNames", "[", "\"\<*.nc\>\"", "]"}]}], ";"}]}], "\n", 
+ RowBox[{
+  RowBox[{"result", "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Block", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"d", "=", 
+          RowBox[{"Import", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Datasets\>\"", ",", "\"\<tp\>\""}], "}"}]}], 
+           "]"}]}], "}"}], ",", "\n", "          ", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"d", "[", 
+           RowBox[{"[", 
+            RowBox[{";;", ",", 
+             RowBox[{"points", "[", 
+              RowBox[{"[", 
+               RowBox[{"jj", ",", "1"}], "]"}], "]"}], ",", 
+             RowBox[{"points", "[", 
+              RowBox[{"[", 
+               RowBox[{"jj", ",", "2"}], "]"}], "]"}]}], "]"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"jj", ",", 
+            RowBox[{"Length", "[", "points", "]"}]}], "}"}]}], "]"}]}], "]"}],
+       "&"}], ",", "files"}], "]"}]}], ";"}], "\n", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"dataset", "<>", "\"\<.mx\>\""}], ",", "result"}], "]"}]}], "Code",\
+
+ CellChangeTimes->{{3.7155462593241997`*^9, 3.7155462728613853`*^9}, 
+   3.71554651659663*^9},ExpressionUUID->"4f24c8ee-3b00-4801-802a-\
+917d9fb5f92f"],
 
 Cell[CellGroupData[{
 
@@ -814,33 +1040,39 @@ Cell[BoxData[
       " ", 
       RowBox[{"files", "=", 
        RowBox[{"FileNames", "[", "\"\<*.nc\>\"", "]"}]}], ";", "\n", " ", 
-      RowBox[{"ParallelMap", "[", 
-       RowBox[{
+      RowBox[{"result", "=", 
+       RowBox[{"Map", "[", 
         RowBox[{
-         RowBox[{"Block", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"d", "=", 
-             RowBox[{"Import", "[", 
-              RowBox[{"#", ",", 
-               RowBox[{"{", 
-                RowBox[{"\"\<Datasets\>\"", ",", "\"\<tp\>\""}], "}"}]}], 
-              "]"}]}], "}"}], ",", "\n", "          ", 
-           RowBox[{"Table", "[", 
-            RowBox[{
-             RowBox[{"d", "[", 
-              RowBox[{"[", 
-               RowBox[{";;", ",", 
-                RowBox[{"points", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"jj", ",", "1"}], "]"}], "]"}], ",", 
-                RowBox[{"points", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"jj", ",", "2"}], "]"}], "]"}]}], "]"}], "]"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"jj", ",", 
-               RowBox[{"Length", "[", "points", "]"}]}], "}"}]}], "]"}]}], 
-          "]"}], "&"}], ",", "files"}], "]"}]}]}], "]"}]}], ";"}]], "Code",
+         RowBox[{
+          RowBox[{"Block", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"d", "=", 
+              RowBox[{"Import", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Datasets\>\"", ",", "\"\<tp\>\""}], "}"}]}], 
+               "]"}]}], "}"}], ",", "\n", "          ", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"d", "[", 
+               RowBox[{"[", 
+                RowBox[{";;", ",", 
+                 RowBox[{"points", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"jj", ",", "1"}], "]"}], "]"}], ",", 
+                 RowBox[{"points", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"jj", ",", "2"}], "]"}], "]"}]}], "]"}], "]"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"jj", ",", 
+                RowBox[{"Length", "[", "points", "]"}]}], "}"}]}], "]"}]}], 
+           "]"}], "&"}], ",", "files"}], "]"}]}], ";", "\n", " ", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{"dataset", "<>", "\"\<.mx\>\""}], ",", "result"}], "]"}], ";",
+       "\n", " ", "dataset"}]}], "]"}]}], ";"}]], "Code",
  CellChangeTimes->{
   3.714855709571062*^9, {3.714916486290579*^9, 3.7149164882170963`*^9}, {
    3.71491719619144*^9, 3.7149172483024197`*^9}, {3.714917353264412*^9, 
@@ -875,8 +1107,10 @@ Cell[BoxData[
    3.715533201894268*^9}, {3.7155332568548107`*^9, 3.715533267818646*^9}, {
    3.71553332880103*^9, 3.715533780514917*^9}, {3.715533821372285*^9, 
    3.715534150683975*^9}, {3.715534182348102*^9, 3.715534215397931*^9}, {
-   3.71553480100103*^9, 
-   3.7155348085980387`*^9}},ExpressionUUID->"4619efbd-c668-4689-ac0f-\
+   3.71553480100103*^9, 3.7155348085980387`*^9}, {3.715545151226389*^9, 
+   3.715545191736158*^9}, {3.715545947418604*^9, 3.7155459489746447`*^9}, {
+   3.7155462448924923`*^9, 
+   3.715546248612465*^9}},ExpressionUUID->"4619efbd-c668-4689-ac0f-\
 2433702f411b"],
 
 Cell[CellGroupData[{
@@ -892,11 +1126,11 @@ Cell[BoxData[{
    RowBox[{"[", 
     RowBox[{"{", 
      RowBox[{
-     "1", ",", "3", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",", 
-      "9", ",", "10", ",", "11"}], "}"}], "]"}], "]"}]}]}], "Code",
+     "4", ",", "5", ",", "6", ",", "7", ",", "8", ",", "9", ",", "10", ",", 
+      "11"}], "}"}], "]"}], "]"}]}]}], "Code",
  CellChangeTimes->{{3.715531221261883*^9, 3.715531254492004*^9}, {
-  3.715531290677548*^9, 
-  3.715531383094399*^9}},ExpressionUUID->"75878f2d-68c0-484a-a856-\
+  3.715531290677548*^9, 3.715531383094399*^9}, {3.7155465320746593`*^9, 
+  3.715546532798634*^9}},ExpressionUUID->"75878f2d-68c0-484a-a856-\
 ead03dbb56c5"],
 
 Cell[BoxData[
@@ -906,8 +1140,9 @@ Cell[BoxData[
    ",", "\<\"KMA\"\>", ",", "\<\"MeteoFrance\"\>", ",", "\<\"NCEP\"\>", 
    ",", "\<\"UKMO\"\>"}], "}"}]], "Output",
  CellChangeTimes->{{3.7155313290021057`*^9, 3.715531383371567*^9}, 
-   3.715534372402801*^9},ExpressionUUID->"19f2d73c-354a-4841-a230-\
-5fd6d1ae3ba2"]
+   3.715534372402801*^9, 3.715545139713756*^9, 3.7155451946237583`*^9, 
+   3.715546209984818*^9},ExpressionUUID->"4b372036-e52f-48d9-8e66-\
+7d68649e4857"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -919,8 +1154,8 @@ Cell[BoxData[
       RowBox[{"polygon", ",", "#", ",", "\"\<Control\>\""}], "]"}], "&"}], 
     ",", "names"}], "]"}], ";"}]], "Code",
  CellChangeTimes->{{3.715534373898374*^9, 
-  3.7155343948821373`*^9}},ExpressionUUID->"3628b271-3da5-4e1a-bf75-\
-a4b9a384c0d4"]
+  3.7155343948821373`*^9}},ExpressionUUID->"8a7fb2f7-fb05-4bfc-b65f-\
+0defa4f923a1"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -942,13 +1177,13 @@ CellTagsIndex->{
    CellTags->"SlideShowHeader"],
   Cell[5512, 141, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"f09538bb-b115-49ac-8b2d-711545615562",
    CellTags->"SlideShowHeader"],
-  Cell[32307, 613, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0",
+  Cell[32358, 614, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 46008, 939}
+ {"SlideShowHeader", 55206, 1174}
  }
 *)
 (*NotebookFileOutline
@@ -969,21 +1204,22 @@ Cell[5831, 152, 380, 11, 103, "Code",ExpressionUUID->"64b9e6af-10b0-485b-9617-2b
 Cell[6214, 165, 1867, 52, 263, "Code",ExpressionUUID->"e9307c24-6af9-460a-814e-8ac498e55e7a"],
 Cell[CellGroupData[{
 Cell[8106, 221, 275, 6, 70, "Code",ExpressionUUID->"4667b46e-cc9c-4d42-baa6-40acd30ac370"],
-Cell[8384, 229, 23862, 377, 453, "Output",ExpressionUUID->"c6596e7a-1962-424c-8a71-eaa9736aaaef"]
+Cell[8384, 229, 23913, 378, 453, "Output",ExpressionUUID->"bbe04255-be01-42ef-b52e-d2b544352aac"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[32307, 613, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0",
+Cell[32358, 614, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0",
  CellTags->"SlideShowHeader"],
+Cell[32483, 618, 8657, 223, 711, "Code",ExpressionUUID->"4f24c8ee-3b00-4801-802a-917d9fb5f92f"],
 Cell[CellGroupData[{
-Cell[32454, 619, 156, 3, 65, "Subchapter",ExpressionUUID->"7644be19-7bea-49d9-bbb9-cbd9afcbba48"],
-Cell[32613, 624, 11575, 255, 679, "Code",ExpressionUUID->"4619efbd-c668-4689-ac0f-2433702f411b"],
+Cell[41165, 845, 156, 3, 65, "Subchapter",ExpressionUUID->"7644be19-7bea-49d9-bbb9-cbd9afcbba48"],
+Cell[41324, 850, 11962, 263, 743, "Code",ExpressionUUID->"4619efbd-c668-4689-ac0f-2433702f411b"],
 Cell[CellGroupData[{
-Cell[44213, 883, 572, 16, 103, "Code",ExpressionUUID->"75878f2d-68c0-484a-a856-ead03dbb56c5"],
-Cell[44788, 901, 434, 8, 47, "Output",ExpressionUUID->"19f2d73c-354a-4841-a230-5fd6d1ae3ba2"]
+Cell[53311, 1117, 600, 16, 103, "Code",ExpressionUUID->"75878f2d-68c0-484a-a856-ead03dbb56c5"],
+Cell[53914, 1135, 506, 9, 47, "Output",ExpressionUUID->"4b372036-e52f-48d9-8e66-7d68649e4857"]
 }, Open  ]],
-Cell[45237, 912, 347, 10, 70, "Code",ExpressionUUID->"3628b271-3da5-4e1a-bf75-a4b9a384c0d4"]
+Cell[54435, 1147, 347, 10, 70, "Code",ExpressionUUID->"8a7fb2f7-fb05-4bfc-b65f-0defa4f923a1"]
 }, Open  ]]
 }, Open  ]]
 }
