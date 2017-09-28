@@ -1,0 +1,497 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19923,        489]
+NotebookOptionsPosition[     14600,        389]
+NotebookOutlinePosition[     16281,        427]
+CellTagsIndexPosition[     16203,        422]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ TogglerBox[1, {1->
+  OverlayBox[{
+   TagBox[GridBox[{
+      {
+       GraphicsBox[RasterBox[CompressedData["
+1:eJxTTMoPSmNiYGAo5gASQYnljkVFiZXBAkBOaF5xZnpeaopnXklqemqRRRIz
+UFAKiEGSLED8//9/gvjRo0fsN27cELp69arY+fPnpZExPn137tzhBqrRBGJ/
+ID4CxMfRMTZ9L168YL5w4YIaUD4AiC8C8Qcg/gvE/9AxFreC7PQD4gtA/BGq
+7j8ujKz3+fPnLFC9b6H24dSHTf/FixfVofYSpRdZPzSsAqBuJkovsn5oOF8k
+5F9s+h88eMBBjt0w/devXxcGso+S4m9k/ZcuXRKHpgeS3A7TD0wrkpToPw9J
+ywOmn1L3Uxp+lMYfpemH0vRLjfwDjQey8y9a+fGOWDPwlF+gsPhEKDywlZ8g
+d0D9EniexPITGd++fZv3PBnlN6764zxa3QHCAIDESDs=
+         "], {{0, 26}, {16, 
+         0}}, {0, 255},
+         ColorFunction->RGBColor],
+        BaseStyle->"ImageGraphics",
+        ImageSize->Magnification[1],
+        ImageSizeRaw->{16, 26},
+        PlotRange->{{0, 16}, {0, 26}}], 
+       GraphicsBox[RasterBox[CompressedData["
+1:eJzt2V1vVFUUBuBGTfTSSygthYYKNHyVinrrpbcYfwBEJN5gUkyMfw9KKaVw
+KCkQKCW1RNIQKg1gEE3QtdN10pMRZCaBzNQ+kzxt5nzstfeZfbPOu/vkD8e/
+e6+vr+/sR/Hn+ImfvpyYOPHz1x/Hl2/OnP3+9JlT33515sdTp09NfHHy/TjY
+H6592Nf3QfyvqmpHBwbCYNr5GoMNAw2d1AEAADa3/obtLba1aJ7rb4xR9x1D
+YVfYHYbDnjASPgn7wv4wGg6Eg+FQOByOhLEwnj4Nx8Jn6fM21dcfyzHq8cay
+xuGseTDnMJpz2pdzHMk5D+caduWa6v6p+czafU71s6p1+/cGAADYqt52/9va
+++6tXt331j3v0TTeoj5e966v6lv3Vv/uWfWr9LJm9tzMpN+UW3eaVV9s00yY
+CzfC7bAQFhvuhjt57maYD9er9c+VcDlcCtMd1AQAADafqXQhTabz6VyL+vhk
+Xl/uLX1D6UFmw9VwrVrvL0o/cqta7ztKD3Iv/BLuh1/DSngYHoXfwlp4Ep6F
+38Pz8Ed4Ef5Mf71Gff5F3vM8x3iWY65ljUdZcyXncD/ndC/neDvnfCPXcC3X
+NJtrnG48r3afU/2s6uc11QO/OwAAwFbzLvrfksWVjK30kSV3KxncUlgOD6qN
+vnc1PK42+t7iaaq/r+U1q9VG3/ogx1rKse9krfmsrV+l15R9WDLmkjWXzLl8
+yvuVsmdLJl3eu5R9XN7BNLPrhTxX3seUvT3TQc2Xbfr7LWq3JgAAwH95m33K
+u9Dt5wMAAMDmp2dlK+vGnu/2+yQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYPN42aZu
+1AQAAAAAAICtrNsZIXRTN/b8xTbNhLlwI9wOC2Gx4W64k+duhvlwvVr/XAmX
+w6Uw3UFNAAAAAAAA6EVT6UKaTOfTuRb18cm8vtxbcrOSwc2Gq9V6FlcytlvV
+eu5WMrilsBwehJXwMKyGx2EtPElPU/19La9ZzXtWcozlHHMxa9zKmnM5h9mc
+03Rjfe2uq15bvb6pHvid2NzKPiwZc8maS+ZcPiWDLnu2ZNIlmy77uGTVzex6
+Ic+VbLvs7ZkOau7owEAYTDtfY7BhoKGTOgAAAAAAANDr+hu2t9jWonmuvzFG
+nbsNhd1hOOwJI2Fv2B9Gw4FwMBwKR8JYOJrGW9THx/LaQ3nvgRxrf449krWG
+s/ZQtZH3NdfY7rrqtdW6/fvw/9LMnpuZ9Jty646y6n8AhCP7tg==
+         "], {{0, 26}, {
+         2000, 0}}, {0, 255},
+         ColorFunction->RGBColor],
+        BaseStyle->"ImageGraphics",
+        ImageSize->Magnification[1],
+        ImageSizeRaw->{2000, 26},
+        PlotRange->{{0, 2000}, {0, 26}}], 
+       GraphicsBox[RasterBox[CompressedData["
+1:eJy9lktLQkEUxyVdCBIELaxctYq+QduWbcKMPoCSRRsDC6JPp+Lj4vuq+EBc
+iBtFfIYrpU7nPzQiN++9vmrgp/dx5j8z55w5c099z56HPYvF8mLnH4/37TIY
+9L7fHvDNXeDl6THgv78KvPof/cELn5UfnjBHjI3J5/OudVBV9bhUKjmbzaad
+iCxmcB9lAxKMmzmv1+v7JvpfG/DJjJkic8NrOut0OlYdfdoCjPXBqMx1q9Vy
+7FhfgvX0MUa73bYZ6edyuTnrvPsZQ4Wv9PTRL5vNroTOGIiJu9FoOLT6UjuT
+yVAqlaJkMin+0+m0YPEZbHTGQDwKyKtl+ugHjdFoRIVCgeLxOCUSCQGua7Ua
+9Xo9YQNbozXI/aHVZ//RcDik2WxG5XKZwuGwANdo0JfrNIhDvFqtHi7zD+YW
+i8VoMBgIvWKxKEDrdrtiHbAxiAF8pHAf5zJ9+Bca0WiUxuMxydbv98U64CvY
+wNZgTyioI9r8QR/EEvrQUhRlrh8Kheb6sDHTZ1xG84ePMP/pdPpr/tvoL/of
+Mcb9Jv7X+mcxP2X+QCMSiYh5VyoVMQbXMbP81I2vzM/JZCLyX+a+BPmPvbFN
+fmr36pr713B/rVp7THy/tD6Y1cjF5zrahvVtB5jW5y21B/kVzpc1kecjfK53
+Pu7kfNfO+x+/T/70++ob7NUEtQ==
+         "], {{0, 26}, {24, 0}}, {0, 255},
+         ColorFunction->RGBColor],
+        BaseStyle->"ImageGraphics",
+        ImageSize->Magnification[1],
+        ImageSizeRaw->{24, 26},
+        PlotRange->{{0, 24}, {0, 26}}]}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {Automatic, 
+         Scaled[0.6], Automatic}},
+     GridBoxSpacings->{"Columns" -> {{0}}, "Rows" -> {{0}}}],
+    "Grid"], 
+   PaneBox[
+    StyleBox[
+     RowBox[{
+     "Background", " ", "images", " ", "and", " ", "text", " ", "colors", " ",
+       "have", " ", "been", " ", "adjusted", " ", "for", " ", "editing", " ", 
+      
+      RowBox[{"purposes", "."}]}],
+     LineBreakWithin->False,
+     FontFamily->"Helvetica",
+     FontSize->12,
+     FontColor->GrayLevel[0.4]],
+    Alignment->Center,
+    ImageSize->Scaled[0.5],
+    ScrollPosition->{0., 0.}]},
+   Alignment->{Center, Center}], 2->""}, "1"]], "SlideShowNavigationBar", \
+"FirstSlide",
+ CellMargins->{{0, 0}, {0, 0}},
+ CellFrameLabelMargins->2,
+ CellSize->{Inherited, 30},
+ TextAlignment->Center,
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74"],
+
+Cell["\<\
+An Evaluation of S2S
+ Precipitation Predictability
+Over
+West Coast United States\
+\>", "Title",
+ CellChangeTimes->{
+  3.559948400406288*^9, {3.715625686969005*^9, 3.715625699758637*^9}, {
+   3.715625737415258*^9, 3.715625768804536*^9}, {3.71562739405276*^9, 
+   3.7156274161535273`*^9}},
+ TextAlignment->Center,
+ TextJustification->0.,ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
+
+Cell["\<\
+BX Pan
+2017.9.28\
+\>", "Text",
+ CellChangeTimes->{{3.7156257090317698`*^9, 3.7156257243000107`*^9}},
+ TextAlignment->Right,
+ TextJustification->0.,ExpressionUUID->"5651fc4d-d5a2-45d4-8c4c-3842ec134867"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd"],
+
+Cell[CellGroupData[{
+
+Cell["Abstract", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 
+  3.715625788499967*^9}},ExpressionUUID->"ae778041-d04b-43ad-8412-\
+22446d588c16"],
+
+Cell["\<\
+Current weather forecast provide \[OpenCurlyDoubleQuote]deterministic\
+\[CloseCurlyDoubleQuote] .. Extended .For how long and how accurate? To reach \
+the final user, taylored for use . A first step is to make both deterministic \
+and probabilistic evalution .The S2S provides opportunity for examing how \
+long, how accurate, seek potential forecast window by putting more confidence \
+of forecast results whose model was setup at the right time. In this paper we \
+examine the for the ...
+
+Subseasonal to seasonal prediction(S2S), which falls between the realm of \
+medium-range weather (up to 15 days) and long-range or seasonal (3\[Dash]6 \
+months) forecasts, is of both significant challenge and rewards. A database \
+containing subseasonal to seasonal forecasts from 11 operational centers \
+provides opportunity to examine the achieved progress, set benchmarks for \
+further research, and verify xxx. Here we make a comprehensive evaluation of \
+subseasonal precipitation forecast over the west coast United States, where \
+precipitation extremes frequently happen. using both deterministic and \
+probabilistic scores. Results showed .xxx. We further .. . \
+\>", "Text",
+ CellChangeTimes->{{3.715625924242846*^9, 3.7156260501560907`*^9}, {
+   3.715626172770849*^9, 3.715626178176138*^9}, {3.7156262610790653`*^9, 
+   3.715626266781397*^9}, 3.7156263090474253`*^9, {3.7156263584006166`*^9, 
+   3.715626456623445*^9}, {3.715626490878495*^9, 3.715626776924981*^9}, {
+   3.715627429042408*^9, 3.7156274316916513`*^9}, {3.7156276161027937`*^9, 
+   3.715627630131462*^9}, {3.715627998899189*^9, 
+   3.715628147557309*^9}},ExpressionUUID->"54ea0ef6-8428-4da3-b866-\
+75a86160e0ba"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.715625906850052*^9, 
+  3.715625908824214*^9}},ExpressionUUID->"3d925399-fe5a-45d9-9ed1-\
+373c703c0809"],
+
+Cell[CellGroupData[{
+
+Cell["demand", "Subsubsection",
+ CellChangeTimes->{{3.7156270176229877`*^9, 
+  3.715627018501549*^9}},ExpressionUUID->"b6fb9d0c-c8e3-4696-8544-\
+6d8d867ed8d8"],
+
+Cell["\<\
+Water resources related decisions can be optimized given extended \
+precipitation forecast. For instance, 
+Hydraulic infrastructures security while (opposite) reservoir operation. 
+early warning of floods early release. Although it is not deterministic \
+tailored for decision making. \
+\>", "Text",
+ CellChangeTimes->{{3.715628830720015*^9, 3.7156288861409883`*^9}, {
+  3.715628928245682*^9, 3.715628928867641*^9}, {3.715629134702949*^9, 
+  3.715629209994278*^9}, {3.715629240939314*^9, 3.715629288643074*^9}, {
+  3.7156293570563993`*^9, 
+  3.715629373045602*^9}},ExpressionUUID->"dae0cf89-3222-489a-885e-\
+d4d89e7b177e"],
+
+Cell["\<\
+Many decision making processes regarding water resources can potentially \
+benefit from extended precipitation forecast. 
+For instance, earth lease, 
+\[OpenCurlyDoubleQuote]Determining the economic value of climate and weather \
+forecast information remains challenging (Dutton, 2002; Lazo et al., 2011; \
+Letson et al., 2007; Morss et al., 2008; U.S. Department of Commerce, 2014). \
+Some work indicates that a significant portion of annual U.S. gross domestic \
+product (tens of billions or even trillions of dollars) may be sensitive to \
+the weather (Dutton, 2002). Regardless of forecasts\[CloseCurlyQuote] exact \
+economic value, there is growing recognition that subseasonal to seasonal \
+(S2S) predictions could play an important role in reducing society\
+\[CloseCurlyQuote]s exposure to weather, climate, and other environmental \
+variability, both in the United States and globally (e.g., Thiaw and Kumar, \
+2015; World Bank, 2013).\[CloseCurlyDoubleQuote]\
+\>", "Text",
+ CellChangeTimes->{{3.715627773475974*^9, 3.715627859652286*^9}, {
+  3.7156290427598257`*^9, 
+  3.7156290471056967`*^9}},ExpressionUUID->"34ee2ba4-6212-492f-aaea-\
+d41292a5e5f9"],
+
+Cell["\<\
+provides an important opportunity to inform decision-makers of, for example, \
+changes in risks of extreme events or opportunities for optimizing resource \
+management decisions. \
+\>", "Text",
+ CellChangeTimes->{
+  3.715627339714038*^9},ExpressionUUID->"2545066a-dd23-4ce8-aed8-\
+038395778dfc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["history/difficulties", "Subsubsection",
+ CellChangeTimes->{{3.7156270216855297`*^9, 
+  3.715627028325296*^9}},ExpressionUUID->"91415cd6-e5e9-487e-b28c-\
+72abff445cd6"],
+
+Cell["\<\
+Model loses effect. However, recent progress. how are they made?\
+\>", "Text",
+ CellChangeTimes->{{3.715627894253456*^9, 
+  3.7156279165946617`*^9}},ExpressionUUID->"a81ec4b7-873e-4215-a35a-\
+91713b1984fe"],
+
+Cell["we know the specific difficulty for it here.!!!", "Text",
+ CellChangeTimes->{{3.715628157557221*^9, 
+  3.7156281681387873`*^9}},ExpressionUUID->"9d8534d4-d0ad-41aa-ab48-\
+9ecca2d48766"]
+}, Open  ]],
+
+Cell["S2S Dataset", "Subsubsection",
+ CellChangeTimes->{{3.7156270321492577`*^9, 
+  3.715627035229024*^9}},ExpressionUUID->"dccd7d45-618a-449e-8690-\
+773c8bf9eeda"],
+
+Cell["Research Area", "Subsubsection",
+ CellChangeTimes->{{3.715627038828885*^9, 
+  3.715627044284871*^9}},ExpressionUUID->"4dc0f83a-4b57-4002-b33f-\
+23a7376b81a1"],
+
+Cell[CellGroupData[{
+
+Cell["Structure", "Subsubsection",
+ CellChangeTimes->{{3.7156270483886633`*^9, 
+  3.7156270530708838`*^9}},ExpressionUUID->"08106c5b-3fde-4a3c-a284-\
+4bca8924fcbc"],
+
+Cell["\<\
+
+The philosophies behind weather forecast and climate prediction are \
+different. Weather forecast focuses on how the atmosphere evolves from the \
+initial condition within the constrains of conservation equations. It is easy \
+to gain quantitative impression of weather.
+
+, climate is an aggregate of weather conditions : it is a distribution of \
+certain variables
+(called the climate variables) arising for a certain configuration of the \
+climate system.
+  
+  A database containing subseasonal to seasonal forecasts from 11 operational \
+centers is available to the research community and will help advance our \
+understanding of predictability at the subseasonal to seasonal time range\
+\>", "Text",
+ CellChangeTimes->{{3.715626830883499*^9, 3.715626855037335*^9}, {
+  3.7156270136571283`*^9, 
+  3.715627014394938*^9}},ExpressionUUID->"860bb69b-a7ac-45a1-b254-\
+91ea9219d7b2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe"],
+
+Cell["Data", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.715628209691998*^9, 
+  3.715628210351832*^9}},ExpressionUUID->"f2f83710-2ec1-4833-9cf8-\
+1e97bfec8838"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250"],
+
+Cell["Score Metric", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.7156282146572943`*^9, 
+  3.715628217953314*^9}},ExpressionUUID->"83d76012-ebcb-435a-9636-\
+7ca02e5ca90e"],
+
+Cell["Deterministic", "Subchapter",
+ CellChangeTimes->{{3.715628219945244*^9, 
+  3.715628222041162*^9}},ExpressionUUID->"4101154c-be6b-4516-8786-\
+a6d8542d2a9f"],
+
+Cell["Probabilistic", "Subchapter",
+ CellChangeTimes->{{3.715628224440897*^9, 
+  3.715628228008943*^9}},ExpressionUUID->"4dff053c-c72e-4609-b049-\
+1f138f7c2847"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390"],
+
+Cell["Evaluation Results", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.715628230475287*^9, 
+  3.715628244176309*^9}},ExpressionUUID->"b926fb8f-c20f-4c7c-9b87-\
+4c83d5af810c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64"],
+
+Cell["Seeking Forecast windows", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.715628230475287*^9, 
+  3.715628258032024*^9}},ExpressionUUID->"bc477cb9-0c46-41dd-b691-\
+edabe7ef4260"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5"],
+
+Cell["Conclusion", "Section",
+ CellChangeTimes->{{3.715625787110599*^9, 3.715625788499967*^9}, {
+  3.715628230475287*^9, 
+  3.7156282643675623`*^9}},ExpressionUUID->"a2248013-f2fd-4e26-86ed-\
+443cf70f39bc"]
+}, Open  ]]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{144, Automatic}, {Automatic, 31}},
+TaggingRules->{"SlideShow" -> True},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->FrontEnd`FileName[{"SlideShow"}, "Garnet.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "SlideShowHeader"->{
+  Cell[580, 22, 4399, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74",
+   CellTags->"SlideShowHeader"],
+  Cell[5634, 146, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
+   CellTags->"SlideShowHeader"],
+  Cell[7676, 189, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
+   CellTags->"SlideShowHeader"],
+  Cell[12441, 316, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
+   CellTags->"SlideShowHeader"],
+  Cell[12801, 329, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
+   CellTags->"SlideShowHeader"],
+  Cell[13499, 352, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
+   CellTags->"SlideShowHeader"],
+  Cell[13873, 365, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
+   CellTags->"SlideShowHeader"],
+  Cell[14253, 378, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
+   CellTags->"SlideShowHeader"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"SlideShowHeader", 15022, 402}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4399, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74",
+ CellTags->"SlideShowHeader"],
+Cell[4982, 122, 400, 11, 566, "Title",ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
+Cell[5385, 135, 212, 6, 93, "Text",ExpressionUUID->"5651fc4d-d5a2-45d4-8c4c-3842ec134867"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5634, 146, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[5781, 152, 153, 3, 123, "Section",ExpressionUUID->"ae778041-d04b-43ad-8412-22446d588c16"],
+Cell[5937, 157, 1690, 26, 511, "Text",ExpressionUUID->"54ea0ef6-8428-4da3-b866-75a86160e0ba"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7676, 189, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[7823, 195, 206, 4, 123, "Section",ExpressionUUID->"3d925399-fe5a-45d9-9ed1-373c703c0809"],
+Cell[CellGroupData[{
+Cell[8054, 203, 159, 3, 74, "Subsubsection",ExpressionUUID->"b6fb9d0c-c8e3-4696-8544-6d8d867ed8d8"],
+Cell[8216, 208, 632, 12, 131, "Text",ExpressionUUID->"dae0cf89-3222-489a-885e-d4d89e7b177e"],
+Cell[8851, 222, 1169, 19, 397, "Text",ExpressionUUID->"34ee2ba4-6212-492f-aaea-d41292a5e5f9"],
+Cell[10023, 243, 305, 7, 93, "Text",ExpressionUUID->"2545066a-dd23-4ce8-aed8-038395778dfc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10365, 255, 173, 3, 74, "Subsubsection",ExpressionUUID->"91415cd6-e5e9-487e-b28c-72abff445cd6"],
+Cell[10541, 260, 216, 5, 55, "Text",ExpressionUUID->"a81ec4b7-873e-4215-a35a-91713b1984fe"],
+Cell[10760, 267, 191, 3, 55, "Text",ExpressionUUID->"9d8534d4-d0ad-41aa-ab48-9ecca2d48766"]
+}, Open  ]],
+Cell[10966, 273, 164, 3, 74, "Subsubsection",ExpressionUUID->"dccd7d45-618a-449e-8690-773c8bf9eeda"],
+Cell[11133, 278, 164, 3, 53, "Subsubsection",ExpressionUUID->"4dc0f83a-4b57-4002-b33f-23a7376b81a1"],
+Cell[CellGroupData[{
+Cell[11322, 285, 164, 3, 53, "Subsubsection",ExpressionUUID->"08106c5b-3fde-4a3c-a284-4bca8924fcbc"],
+Cell[11489, 290, 891, 19, 435, "Text",ExpressionUUID->"860bb69b-a7ac-45a1-b254-91ea9219d7b2"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12441, 316, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
+ CellTags->"SlideShowHeader"],
+Cell[12566, 320, 198, 4, 123, "Section",ExpressionUUID->"f2f83710-2ec1-4833-9cf8-1e97bfec8838"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12801, 329, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
+ CellTags->"SlideShowHeader"],
+Cell[12926, 333, 208, 4, 123, "Section",ExpressionUUID->"83d76012-ebcb-435a-9636-7ca02e5ca90e"],
+Cell[13137, 339, 161, 3, 49, "Subchapter",ExpressionUUID->"4101154c-be6b-4516-8786-a6d8542d2a9f"],
+Cell[13301, 344, 161, 3, 49, "Subchapter",ExpressionUUID->"4dff053c-c72e-4609-b049-1f138f7c2847"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13499, 352, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
+ CellTags->"SlideShowHeader"],
+Cell[13624, 356, 212, 4, 123, "Section",ExpressionUUID->"b926fb8f-c20f-4c7c-9b87-4c83d5af810c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13873, 365, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
+ CellTags->"SlideShowHeader"],
+Cell[13998, 369, 218, 4, 123, "Section",ExpressionUUID->"bc477cb9-0c46-41dd-b691-edabe7ef4260"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14253, 378, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
+ CellTags->"SlideShowHeader"],
+Cell[14378, 382, 206, 4, 123, "Section",ExpressionUUID->"a2248013-f2fd-4e26-86ed-443cf70f39bc"]
+}, Open  ]]
+}
+]
+*)
+
