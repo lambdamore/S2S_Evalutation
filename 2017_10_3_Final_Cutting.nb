@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     93550,       2075]
-NotebookOptionsPosition[     89332,       1992]
-NotebookOutlinePosition[     90410,       2022]
-CellTagsIndexPosition[     90331,       2017]
+NotebookDataLength[    100776,       2255]
+NotebookOptionsPosition[     95899,       2161]
+NotebookOutlinePosition[     97123,       2193]
+CellTagsIndexPosition[     97044,       2188]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1383,42 +1383,25 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[BoxData[
- RowBox[{"datasets", "=", 
-  RowBox[{"Block", "[", 
-   RowBox[{
-    RowBox[{"{", "}"}], ",", "\n", "\t", 
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"datasets", "=", 
+   RowBox[{"Block", "[", 
     RowBox[{
+     RowBox[{"{", "}"}], ",", "\n", "\t", 
      RowBox[{
-     "SetDirectory", "[", 
-      "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data\>\"", "]"}], 
-     ";", "\n", "\t", 
-     RowBox[{
-      RowBox[{"FileNames", "[", "]"}], "[", 
-      RowBox[{"[", 
-       RowBox[{"{", 
-        RowBox[{
-        "1", ",", "2", ",", "10", ",", "11", ",", "12", ",", "13", ",", "14", 
-         ",", "15", ",", "16", ",", "17", ",", "19"}], "}"}], "]"}], 
-      "]"}]}]}], "]"}]}]], "Code",
- CellChangeTimes->{{3.716136192173435*^9, 
-  3.716136276409602*^9}},ExpressionUUID->"c0750b5d-f996-4f83-9a5c-\
-83759ee0e9ad"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"\<\"BoM\"\>", ",", "\<\"CMA\"\>", ",", "\<\"ECCC\"\>", 
-   ",", "\<\"ECMWF\"\>", ",", "\<\"HCMR\"\>", ",", "\<\"ISACCNR\"\>", 
-   ",", "\<\"JMA\"\>", ",", "\<\"KMA\"\>", ",", "\<\"MeteoFrance\"\>", 
-   ",", "\<\"NCEP\"\>", ",", "\<\"UKMO\"\>"}], "}"}]], "Output",
- CellChangeTimes->{{3.716136205902103*^9, 
-  3.716136276912369*^9}},ExpressionUUID->"dee6a0dd-1422-44de-89cc-\
-4c62cb89fd00"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
+      RowBox[{
+      "SetDirectory", "[", 
+       "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data\>\"", "]"}], 
+      ";", "\n", "\t", 
+      RowBox[{
+       RowBox[{"FileNames", "[", "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"{", 
+         RowBox[{
+         "1", ",", "2", ",", "10", ",", "11", ",", "12", ",", "13", ",", "14",
+           ",", "15", ",", "16", ",", "17", ",", "19"}], "}"}], "]"}], 
+       "]"}]}]}], "]"}]}], ";"}], "\n", 
  RowBox[{"TableForm", "[", 
   RowBox[{
    RowBox[{"Map", "[", 
@@ -1449,10 +1432,11 @@ Cell[BoxData[
        "\"\<Dataset\>\"", ",", "\"\<Forecast Days\>\"", ",", 
         "\"\<Ensemble Size\>\"", ",", "\"\<Starting Times\>\"", ",", 
         "\"\<Grids\>\""}], "}"}]}], "}"}]}], ",", "\n", "\t\t", 
-   RowBox[{"TableAlignments", "\[Rule]", "Center"}]}], "]"}]], "Code",
+   RowBox[{"TableAlignments", "\[Rule]", "Center"}]}], "]"}]}], "Code",
  CellChangeTimes->{{3.716137538164749*^9, 3.7161376170972233`*^9}, {
   3.716138873107452*^9, 3.7161388846497183`*^9}, {3.716141507425325*^9, 
-  3.7161415847149353`*^9}},ExpressionUUID->"a52c7ab3-1250-47db-9185-\
+  3.7161415847149353`*^9}, {3.716141859692247*^9, 
+  3.716141862540432*^9}},ExpressionUUID->"a52c7ab3-1250-47db-9185-\
 996e2e1df64e"],
 
 Cell[BoxData[
@@ -1988,6 +1972,191 @@ Cell[BoxData[{
   3.715872501160215*^9}},ExpressionUUID->"24171e1e-7be0-4a01-a706-\
 732ea26ffbb3"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["", "SlideShowNavigationBar",
+ CellTags->
+  "SlideShowHeader",ExpressionUUID->"739f7fa2-8a8b-4a73-a082-f98e03ff0e18"],
+
+Cell[CellGroupData[{
+
+Cell["Remove Negative", "Section",
+ CellChangeTimes->{{3.716142057229529*^9, 
+  3.7161420634837313`*^9}},ExpressionUUID->"287d0619-d55b-494f-a592-\
+62c1f8d480ef"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"RemoveNegative", "[", "dataset_", "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"simu", ",", "obser", ",", "points", ",", "select"}], "}"}], 
+     ",", "\n", 
+     RowBox[{
+      RowBox[{"simu", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+        "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/\>\"", "<>", 
+         "dataset", "<>", "\"\</\>\"", "<>", "dataset", "<>", 
+         "\"\<_simu.mx\>\""}], "]"}]}], ";", "\n", 
+      RowBox[{"points", "=", 
+       RowBox[{"Position", "[", 
+        RowBox[{"simu", ",", 
+         RowBox[{"_", "?", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "<", "0.0"}], "&"}], ")"}]}]}], "]"}]}], ";", "\n", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Set", "[", 
+          RowBox[{
+           RowBox[{"simu", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "3", "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "]"}], ",", "0.0"}], 
+          "]"}], "&"}], ",", "points"}], "]"}], ";", "\n", 
+      RowBox[{"simu", "=", 
+       RowBox[{"Map", "[", 
+        RowBox[{"Transpose", ",", 
+         RowBox[{"Transpose", "[", "simu", "]"}]}], "]"}]}], ";", "\n", 
+      RowBox[{"obser", "=", 
+       RowBox[{"Import", "[", 
+        RowBox[{
+        "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/\>\"", "<>", 
+         "dataset", "<>", "\"\</\>\"", "<>", "dataset", "<>", 
+         "\"\<_cpc.mx\>\""}], "]"}]}], ";", "\n", 
+      RowBox[{"points", "=", 
+       RowBox[{"Position", "[", 
+        RowBox[{"obser", ",", 
+         RowBox[{"_", "?", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"#", "<", "0.0"}], "&"}], ")"}]}]}], "]"}]}], ";", "\n", 
+      RowBox[{"Map", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Set", "[", 
+          RowBox[{
+           RowBox[{"obser", "[", 
+            RowBox[{"[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], ",", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "]"}], ",", "0.0"}], 
+          "]"}], "&"}], ",", "points"}], "]"}], ";", "\n", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"select", "=", 
+         RowBox[{"Select", "[", 
+          RowBox[{
+           RowBox[{"Range", "[", "33", "]"}], ",", 
+           RowBox[{
+            RowBox[{"Not", "[", 
+             RowBox[{"MemberQ", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"24", ",", "28"}], "}"}], ",", "#"}], "]"}], "]"}], 
+            "&"}]}], "]"}]}], ";", "\n", 
+        RowBox[{"simu", "=", 
+         RowBox[{"simu", "[", 
+          RowBox[{"[", 
+           RowBox[{";;", ",", ";;", ",", ";;", ",", "select"}], "]"}], 
+          "]"}]}], ";", "\n", 
+        RowBox[{"obser", "=", 
+         RowBox[{"obser", "[", 
+          RowBox[{"[", 
+           RowBox[{";;", ",", ";;", ",", "select"}], "]"}], "]"}]}], ";"}], 
+       "*)"}], "\n", 
+      RowBox[{"Export", "[", 
+       RowBox[{
+        RowBox[{
+        "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/\>\"", "<>", 
+         "dataset", "<>", "\"\</\>\"", "<>", "dataset", "<>", "\"\<.mx\>\""}],
+         ",", 
+        RowBox[{"{", 
+         RowBox[{"simu", ",", "obser"}], "}"}]}], "]"}]}]}], "]"}]}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.716059551657813*^9, 3.716059577131254*^9}, {
+   3.716059961150011*^9, 3.716059964045714*^9}, {3.716060011069577*^9, 
+   3.716060040395393*^9}, {3.7161418951803417`*^9, 3.716141915680028*^9}, {
+   3.7161420133038473`*^9, 3.716142024085661*^9}, {3.716142066212736*^9, 
+   3.716142108907751*^9}, 3.716142675559833*^9, {3.716142801040357*^9, 
+   3.716142805534813*^9}, {3.716144282138857*^9, 3.716144308386634*^9}, 
+   3.716144370845162*^9},ExpressionUUID->"fa509e3f-e6cf-4d89-a6ac-\
+ae2e571246ce"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Map", "[", 
+  RowBox[{"RemoveNegative", ",", "datasets"}], "]"}]], "Code",
+ CellChangeTimes->{{3.716142118403911*^9, 3.7161421464264708`*^9}, {
+   3.716144314376855*^9, 3.716144316080757*^9}, 
+   3.7161443772471313`*^9},ExpressionUUID->"9dadc676-3d01-4708-9b13-\
+6db68f4fe250"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/CMA/CMA.mx\
+\"\>", ",", \
+"\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/ECCC/ECCC.mx\"\>", 
+   ",", "\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/ECMWF/ECMWF.\
+mx\"\>", ",", \
+"\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/HCMR/HCMR.mx\"\>", 
+   ",", "\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/ISACCNR/\
+ISACCNR.mx\"\>", 
+   ",", "\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/JMA/JMA.mx\"\
+\>", ",", "\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/KMA/KMA.mx\
+\"\>", ",", \
+"\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/MeteoFrance/\
+MeteoFrance.mx\"\>", 
+   ",", "\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/NCEP/NCEP.mx\
+\"\>", ",", \
+"\<\"/Users/lambda/Documents/Research/S2SEvaluation/Data/UKMO/UKMO.mx\"\>"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.716144508099429*^9},ExpressionUUID->"ed56cd3f-1b51-4c86-b16b-\
+91cf1c4262d1"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/BoM/BoM.mx\>\"", 
+   ",", ",", 
+   "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/ECCC/ECCC.mx\>\"",
+    ",", "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/ECMWF/ECMWF.\
+mx\>\"", ",", 
+   "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/HCMR/HCMR.mx\>\"",
+    ",", "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/ISACCNR/\
+ISACCNR.mx\>\"", ",", 
+   "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/JMA/JMA.mx\>\"", 
+   ",", "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/KMA/KMA.mx\>\
+\"", ",", 
+   "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/MeteoFrance/\
+MeteoFrance.mx\>\"", ",", 
+   "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/NCEP/NCEP.mx\>\"",
+    ",", "\"\</Users/lambda/Documents/Research/S2SEvaluation/Data/UKMO/UKMO.\
+mx\>\""}], "}"}]], "Input",
+ CellChangeTimes->{{3.716144191301525*^9, 3.7161441913141108`*^9}, 
+   3.7161443184400253`*^9},ExpressionUUID->"143e5212-afd7-482f-924a-\
+60ea13e4b4e4"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{Full, Full},
@@ -2010,13 +2179,15 @@ CellTagsIndex->{
    CellTags->"SlideShowHeader"],
   Cell[32401, 614, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"57d0501e-e798-4dc0-bcde-de6e12a4b8f0",
    CellTags->"SlideShowHeader"],
-  Cell[70240, 1513, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"df152377-3140-4819-8091-922352a4ee9b",
+  Cell[69715, 1497, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"df152377-3140-4819-8091-922352a4ee9b",
+   CellTags->"SlideShowHeader"],
+  Cell[88828, 1978, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"739f7fa2-8a8b-4a73-a082-f98e03ff0e18",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 89728, 2005}
+ {"SlideShowHeader", 96295, 2174}
  }
 *)
 (*NotebookFileOutline
@@ -2054,27 +2225,36 @@ Cell[CellGroupData[{
 Cell[62453, 1299, 209, 4, 65, "Subchapter",ExpressionUUID->"48e63d42-dd32-45db-9707-7db96bb92718"],
 Cell[62665, 1305, 3008, 76, 295, "Code",ExpressionUUID->"0022c6ee-35f3-428c-998a-64b123a9e9bf"],
 Cell[CellGroupData[{
-Cell[65698, 1385, 700, 20, 135, "Code",ExpressionUUID->"c0750b5d-f996-4f83-9a5c-83759ee0e9ad"],
-Cell[66401, 1407, 429, 8, 47, "Output",ExpressionUUID->"dee6a0dd-1422-44de-89cc-4c62cb89fd00"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[66867, 1420, 1407, 35, 231, "Code",ExpressionUUID->"a52c7ab3-1250-47db-9185-996e2e1df64e"],
-Cell[68277, 1457, 1902, 49, 356, "Output",ExpressionUUID->"55e7d86b-7c19-4a19-848e-58f7ad8c6a3a"]
+Cell[65698, 1385, 2051, 54, 327, "Code",ExpressionUUID->"a52c7ab3-1250-47db-9185-996e2e1df64e"],
+Cell[67752, 1441, 1902, 49, 342, "Output",ExpressionUUID->"55e7d86b-7c19-4a19-848e-58f7ad8c6a3a"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[70240, 1513, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"df152377-3140-4819-8091-922352a4ee9b",
+Cell[69715, 1497, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"df152377-3140-4819-8091-922352a4ee9b",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[70387, 1519, 154, 3, 65, "Subchapter",ExpressionUUID->"24042f29-303c-47ec-a586-d8848b164edf"],
-Cell[70544, 1524, 242, 6, 70, "Code",ExpressionUUID->"41c04e4b-8db0-405c-8321-4c8aa09a13ca"],
-Cell[70789, 1532, 14026, 336, 1095, "Code",ExpressionUUID->"b00fa272-ea92-4a10-b2fb-42d40e0ca509"]
+Cell[69862, 1503, 154, 3, 65, "Subchapter",ExpressionUUID->"24042f29-303c-47ec-a586-d8848b164edf"],
+Cell[70019, 1508, 242, 6, 70, "Code",ExpressionUUID->"41c04e4b-8db0-405c-8321-4c8aa09a13ca"],
+Cell[70264, 1516, 14026, 336, 1095, "Code",ExpressionUUID->"b00fa272-ea92-4a10-b2fb-42d40e0ca509"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[84852, 1873, 217, 4, 65, "Subchapter",ExpressionUUID->"064901f6-380b-42d6-a788-764e8b9c2e0b"],
-Cell[85072, 1879, 3714, 94, 391, "Code",ExpressionUUID->"8399aba6-14d5-4812-8b6a-9959373564cd"],
-Cell[88789, 1975, 515, 13, 103, "Code",ExpressionUUID->"24171e1e-7be0-4a01-a706-732ea26ffbb3"]
+Cell[84327, 1857, 217, 4, 65, "Subchapter",ExpressionUUID->"064901f6-380b-42d6-a788-764e8b9c2e0b"],
+Cell[84547, 1863, 3714, 94, 391, "Code",ExpressionUUID->"8399aba6-14d5-4812-8b6a-9959373564cd"],
+Cell[88264, 1959, 515, 13, 103, "Code",ExpressionUUID->"24171e1e-7be0-4a01-a706-732ea26ffbb3"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[88828, 1978, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"739f7fa2-8a8b-4a73-a082-f98e03ff0e18",
+ CellTags->"SlideShowHeader"],
+Cell[CellGroupData[{
+Cell[88975, 1984, 162, 3, 123, "Section",ExpressionUUID->"287d0619-d55b-494f-a592-62c1f8d480ef"],
+Cell[89140, 1989, 4276, 111, 423, "Code",ExpressionUUID->"fa509e3f-e6cf-4d89-a6ac-ae2e571246ce"],
+Cell[CellGroupData[{
+Cell[93441, 2104, 301, 6, 70, "Code",ExpressionUUID->"9dadc676-3d01-4708-9b13-6db68f4fe250"],
+Cell[93745, 2112, 1022, 21, 336, "Output",ExpressionUUID->"ed56cd3f-1b51-4c86-b16b-91cf1c4262d1"]
+}, Open  ]],
+Cell[94782, 2136, 1089, 21, 336, InheritFromParent,ExpressionUUID->"143e5212-afd7-482f-924a-60ea13e4b4e4"]
 }, Open  ]]
 }, Open  ]]
 }
