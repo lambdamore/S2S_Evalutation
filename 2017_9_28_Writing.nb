@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    590072,      10001]
-NotebookOptionsPosition[    581578,       9857]
-NotebookOutlinePosition[    583269,       9895]
-CellTagsIndexPosition[    583189,       9890]
+NotebookDataLength[    593606,      10065]
+NotebookOptionsPosition[    584919,       9919]
+NotebookOutlinePosition[    586611,       9957]
+CellTagsIndexPosition[    586531,       9952]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -121,17 +121,18 @@ Pu7kfNfO+x+/T/70++ob7NUEtQ==
   "SlideShowHeader",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74"],
 
 Cell["\<\
-An Evaluation of S2S
- Precipitation Predictability
+S2S Precipitation Predictability and
+Its Association with Madden\[Dash]Julian Oscillation
 Over
 West Coast United States\
 \>", "Title",
  CellChangeTimes->{
   3.559948400406288*^9, {3.715625686969005*^9, 3.715625699758637*^9}, {
    3.715625737415258*^9, 3.715625768804536*^9}, {3.71562739405276*^9, 
-   3.7156274161535273`*^9}},
+   3.7156274161535273`*^9}, {3.716645145686738*^9, 3.716645178834663*^9}},
  TextAlignment->Center,
- TextJustification->0.,ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
+ TextJustification->0.,
+ FontSize->48,ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
 
 Cell["\<\
 BX Pan
@@ -156,6 +157,39 @@ Cell["Abstract", "Section",
 22446d588c16"],
 
 Cell["\<\
+Precipitation predictability is of consistent concern for the West Coast \
+United States given its  frequent encounter of droughts and foods. We \
+evaluate the precipitation predictability over a range of time extension(from \
+days to months) of 11 operational general circulation model hindcast project. \
+Both deterministic and probabilistic skill metrics were applied given the \
+chaotic nature of the climate system. We further construct statistical \
+relationship between predictability and tropical convection pattern of MJO \
+using a competing machine learning strategy. Results showed that 
+
+
+We now assess the ability of the ECMWF reforecast ensemble system to predict \
+AR activity at S2S timescales and whether its skill varies as a function of \
+the phases of the MJO and QBO\
+\>", "Text",
+ CellChangeTimes->{{3.7166457773146877`*^9, 3.716645777656513*^9}, {
+  3.7166557922445593`*^9, 3.716655818633131*^9}, {3.716655864618038*^9, 
+  3.716656187368359*^9}, {3.716656235412695*^9, 3.7166562395298347`*^9}, {
+  3.716656771886441*^9, 3.716656895652308*^9}, {3.716657469946052*^9, 
+  3.716657470424366*^9}},ExpressionUUID->"8a5a17db-a161-4ba0-9344-\
+3b4f69434691"],
+
+Cell["\<\
+The atmosphere is one of the most complex physical systems
+known to humanity\
+\>", "Text",ExpressionUUID->"af2428ec-2ed9-4732-ba0c-9a6bf66c8c1c"],
+
+Cell["\<\
+ Kolmogorov-Sinai
+entropy as a measure of the degree of chaoticity or predictability of a \
+system.\
+\>", "Text",ExpressionUUID->"a9c180cf-3878-4cca-b806-f932331f361a"],
+
+Cell["\<\
 Current weather forecast provide \[OpenCurlyDoubleQuote]deterministic\
 \[CloseCurlyDoubleQuote] .. Extended .For how long and how accurate? To reach \
 the final user, taylored for use . A first step is to make both deterministic \
@@ -170,6 +204,18 @@ we evaluate to what extension and to what accurate we are capable of \
 predicting precipitation in the area, which is frequently bothered by \
 precipitation extremes, given the elusiveness of extratropical cyclone \
 activities.
+Climate research deals with changes in the statistics rather than in the \
+exact state of the Earth system. Ergodic theory is aimed to relating the \
+dynamics of a system to its statistical properties and thus particularly \
+suitable for developing a theory of climate variability. In this \
+presentation, concepts of ergodic theory will be used to study climate \
+variability and response to forcing. In particular, it is shown that crucial \
+information on the stability of the climate system can be extracted by \
+approximations of the associated transfer operators and their ergodicity \
+spectrum. The methodology is applied to transitions in spatially-extended \
+models of the El Nino/Southern Oscillation phenomenon, mid-latitude \
+atmospheric blocking events and transitions between a snow-free and \
+snow-covered Earth.
 
 Subseasonal to seasonal prediction(S2S), which falls between the realm of \
 medium-range weather (up to 15 days) and long-range or seasonal (3\[Dash]6 \
@@ -187,8 +233,8 @@ probabilistic scores. Results showed .xxx. We further .. . \
    3.715626456623445*^9}, {3.715626490878495*^9, 3.715626776924981*^9}, {
    3.715627429042408*^9, 3.7156274316916513`*^9}, {3.7156276161027937`*^9, 
    3.715627630131462*^9}, {3.715627998899189*^9, 3.715628147557309*^9}, 
-   3.7157125732387114`*^9, {3.715712707290791*^9, 
-   3.7157127887616568`*^9}},ExpressionUUID->"54ea0ef6-8428-4da3-b866-\
+   3.7157125732387114`*^9, {3.715712707290791*^9, 3.7157127887616568`*^9}, 
+   3.716570843294147*^9},ExpressionUUID->"54ea0ef6-8428-4da3-b866-\
 75a86160e0ba"],
 
 Cell["\<\
@@ -247,10 +293,30 @@ precipitation forecasts. For instance,
 reservoir operators  can reallocate storage in anticipation of precipitation \
 extremes, alleviating disasters from floods or droughts; the public can be \
 better prepared if high-impact weather were warned in advance of weeks rather \
-than several days. Given its significant economical \
+than several days. 
+
+Given its significant economical \
 potential\\cite[https://www.nap.edu/read/21873/chapter/5],  demands for \
 longer term prediction are rapidly growing in operational prediction and \
-application communities\\cite[s2sdataset].\
+application communities\\cite[s2sdataset]. S2S..A new World Weather Research \
+Programme/ World Climate Research Programme (WWRP/WCRP initiative on \
+subseasonal to seasonal (S2S) prediction has recently been launched to foster \
+collaboration and research in the weather and climate communities, with the \
+goals of improving forecast skill and physical under- standing, promoting \
+forecast uptake by operational cen- ters, and exploitation by the \
+applications community.
+
+NCEP ECMWF history. Currently, statistical/dynamical..
+
+Previous work limitations:
+\t1. too few data
+\t2. too wide geo range (Predictability depends on geo division. It is \
+reported that extratropical . Why extratropical important. physical and \
+social concerns, There was some variability depending on the geo-graphical \
+area. For instance, over Europe, the anomaly correlations decreased much \
+quicker than over the Northern Hemisphere extratropics as a whole.)
+\t3. too few models
+\t3. too naive attribution of predictability variations\
 \>", "Text",
  CellChangeTimes->{{3.715628830720015*^9, 3.7156288861409883`*^9}, {
    3.715628928245682*^9, 3.715628928867641*^9}, {3.715629134702949*^9, 
@@ -272,18 +338,14 @@ application communities\\cite[s2sdataset].\
    3.71570879927059*^9}, {3.715708980745881*^9, 3.7157089825374203`*^9}, {
    3.715709074913048*^9, 3.715709168412178*^9}, {3.7157092095470333`*^9, 
    3.715709250609869*^9}, {3.715710018719348*^9, 3.715710031688877*^9}, {
-   3.715711285635206*^9, 3.7157112883599243`*^9}, 
-   3.716126513475346*^9},ExpressionUUID->"36b4d1a3-091a-487c-b7c4-\
-f3f2e2afa0c8"],
-
-Cell["\<\
-A new World Weather Research Programme/ World Climate Research Programme \
-(WWRP/WCRP initiative on subseasonal to seasonal (S2S) prediction has \
-recently been launched to foster collaboration and research in the weather \
-and climate communities, with the goals of improving forecast skill and \
-physical under- standing, promoting forecast uptake by operational cen- ters, \
-and exploitation by the applications community.\
-\>", "Text",ExpressionUUID->"fc55fe14-3131-40d2-872d-d0d73f97ba06"]
+   3.715711285635206*^9, 3.7157112883599243`*^9}, 3.716126513475346*^9, {
+   3.716656405846735*^9, 3.716656415660409*^9}, {3.716656460233067*^9, 
+   3.716656495421577*^9}, {3.716656641789219*^9, 3.716656647457633*^9}, {
+   3.716656681522249*^9, 3.7166566819720087`*^9}, {3.716656959709955*^9, 
+   3.716656973907473*^9}, {3.7166570175463247`*^9, 3.716657070654665*^9}, {
+   3.7166573131940393`*^9, 3.716657396548151*^9}, {3.716657616336362*^9, 
+   3.716657685986602*^9}},ExpressionUUID->"36b4d1a3-091a-487c-b7c4-\
+f3f2e2afa0c8"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -9871,25 +9933,25 @@ CellTagsIndex->{
  "SlideShowHeader"->{
   Cell[580, 22, 4399, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74",
    CellTags->"SlideShowHeader"],
-  Cell[5634, 146, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
+  Cell[5734, 147, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
    CellTags->"SlideShowHeader"],
-  Cell[9107, 223, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
+  Cell[11581, 269, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
    CellTags->"SlideShowHeader"],
-  Cell[26044, 594, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
+  Cell[29385, 656, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
    CellTags->"SlideShowHeader"],
-  Cell[578252, 9747, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
+  Cell[581593, 9809, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
    CellTags->"SlideShowHeader"],
-  Cell[580477, 9820, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
+  Cell[583818, 9882, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
    CellTags->"SlideShowHeader"],
-  Cell[580851, 9833, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
+  Cell[584192, 9895, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
    CellTags->"SlideShowHeader"],
-  Cell[581231, 9846, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
+  Cell[584572, 9908, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
    CellTags->"SlideShowHeader"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 582000, 9870}
+ {"SlideShowHeader", 585341, 9932}
  }
 *)
 (*NotebookFileOutline
@@ -9897,111 +9959,113 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 4399, 98, 75, "SlideShowNavigationBar",ExpressionUUID->"8174e950-9015-42fd-93bc-b2297f053d74",
  CellTags->"SlideShowHeader"],
-Cell[4982, 122, 400, 11, 566, "Title",ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
-Cell[5385, 135, 212, 6, 93, "Text",ExpressionUUID->"5651fc4d-d5a2-45d4-8c4c-3842ec134867"]
+Cell[4982, 122, 500, 12, 458, "Title",ExpressionUUID->"2b123ae2-dda2-479c-8e34-67b7faea7cd9"],
+Cell[5485, 136, 212, 6, 93, "Text",ExpressionUUID->"5651fc4d-d5a2-45d4-8c4c-3842ec134867"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5634, 146, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
+Cell[5734, 147, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"e550a06c-bff0-4132-a31c-787f2d8e43fd",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[5781, 152, 153, 3, 123, "Section",ExpressionUUID->"ae778041-d04b-43ad-8412-22446d588c16"],
-Cell[5937, 157, 2134, 34, 663, "Text",ExpressionUUID->"54ea0ef6-8428-4da3-b866-75a86160e0ba"],
-Cell[8074, 193, 218, 6, 93, "Text",ExpressionUUID->"cb1a65a6-22d5-433f-b946-1a3d05b072ea"],
-Cell[8295, 201, 412, 8, 131, "Text",ExpressionUUID->"bd480f4f-2bd0-4ab8-82c5-545bab20ebef"],
-Cell[8710, 211, 348, 6, 207, "Text",ExpressionUUID->"79770bc6-d7ba-46b4-9769-e35fcd0eb2a7"]
+Cell[5881, 153, 153, 3, 123, "Section",ExpressionUUID->"ae778041-d04b-43ad-8412-22446d588c16"],
+Cell[6037, 158, 1182, 20, 397, "Text",ExpressionUUID->"8a5a17db-a161-4ba0-9344-3b4f69434691"],
+Cell[7222, 180, 155, 3, 93, "Text",ExpressionUUID->"af2428ec-2ed9-4732-ba0c-9a6bf66c8c1c"],
+Cell[7380, 185, 178, 4, 93, "Text",ExpressionUUID->"a9c180cf-3878-4cca-b806-f932331f361a"],
+Cell[7561, 191, 2984, 46, 967, "Text",ExpressionUUID->"54ea0ef6-8428-4da3-b866-75a86160e0ba"],
+Cell[10548, 239, 218, 6, 93, "Text",ExpressionUUID->"cb1a65a6-22d5-433f-b946-1a3d05b072ea"],
+Cell[10769, 247, 412, 8, 131, "Text",ExpressionUUID->"bd480f4f-2bd0-4ab8-82c5-545bab20ebef"],
+Cell[11184, 257, 348, 6, 207, "Text",ExpressionUUID->"79770bc6-d7ba-46b4-9769-e35fcd0eb2a7"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9107, 223, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
+Cell[11581, 269, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8d8dfc55-952a-45b8-bda4-77e44eb58216",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[9254, 229, 206, 4, 123, "Section",ExpressionUUID->"3d925399-fe5a-45d9-9ed1-373c703c0809"],
+Cell[11728, 275, 206, 4, 123, "Section",ExpressionUUID->"3d925399-fe5a-45d9-9ed1-373c703c0809"],
 Cell[CellGroupData[{
-Cell[9485, 237, 208, 4, 74, "Subsubsection",ExpressionUUID->"b6fb9d0c-c8e3-4696-8544-6d8d867ed8d8"],
-Cell[9696, 243, 2229, 33, 245, "Text",ExpressionUUID->"36b4d1a3-091a-487c-b7c4-f3f2e2afa0c8"],
-Cell[11928, 278, 504, 7, 207, "Text",ExpressionUUID->"fc55fe14-3131-40d2-872d-d0d73f97ba06"]
+Cell[11959, 283, 208, 4, 74, "Subsubsection",ExpressionUUID->"b6fb9d0c-c8e3-4696-8544-6d8d867ed8d8"],
+Cell[12170, 289, 3603, 58, 891, "Text",ExpressionUUID->"36b4d1a3-091a-487c-b7c4-f3f2e2afa0c8"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[12469, 290, 203, 3, 74, "Subsubsection",ExpressionUUID->"42f18ee7-b338-4719-9720-ff7e40842216"],
-Cell[12675, 295, 3176, 50, 1309, "Text",ExpressionUUID->"94647a40-3264-4700-929a-0d1e58905b1e"],
-Cell[15854, 347, 226, 5, 55, "Text",ExpressionUUID->"3e4fb797-966a-444e-bdbc-98c2fddab68b"],
+Cell[15810, 352, 203, 3, 74, "Subsubsection",ExpressionUUID->"42f18ee7-b338-4719-9720-ff7e40842216"],
+Cell[16016, 357, 3176, 50, 1309, "Text",ExpressionUUID->"94647a40-3264-4700-929a-0d1e58905b1e"],
+Cell[19195, 409, 226, 5, 55, "Text",ExpressionUUID->"3e4fb797-966a-444e-bdbc-98c2fddab68b"],
 Cell[CellGroupData[{
-Cell[16105, 356, 218, 4, 53, "Item",ExpressionUUID->"02ede51e-e2c4-4aa1-8e31-3d2c2ec45dde"],
-Cell[16326, 362, 201, 4, 53, "Item",ExpressionUUID->"8f9faee4-d8d1-4f71-a0bc-020c62eb8c48"],
-Cell[16530, 368, 216, 4, 53, "Item",ExpressionUUID->"25929d11-ac0c-4b3b-a14f-6f5ab60a23d4"],
-Cell[16749, 374, 199, 3, 53, "Item",ExpressionUUID->"b14236f2-8d18-46e8-8b62-98841debb0d5"]
+Cell[19446, 418, 218, 4, 53, "Item",ExpressionUUID->"02ede51e-e2c4-4aa1-8e31-3d2c2ec45dde"],
+Cell[19667, 424, 201, 4, 53, "Item",ExpressionUUID->"8f9faee4-d8d1-4f71-a0bc-020c62eb8c48"],
+Cell[19871, 430, 216, 4, 53, "Item",ExpressionUUID->"25929d11-ac0c-4b3b-a14f-6f5ab60a23d4"],
+Cell[20090, 436, 199, 3, 53, "Item",ExpressionUUID->"b14236f2-8d18-46e8-8b62-98841debb0d5"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[16997, 383, 209, 4, 74, "Subsubsection",ExpressionUUID->"f75ba4d5-195e-4565-97b5-17194326efe2"],
-Cell[17209, 389, 155, 3, 55, "Text",ExpressionUUID->"8dc71a72-70d3-47bb-9f36-5947ecf425d1"],
-Cell[17367, 394, 547, 10, 169, "Text",ExpressionUUID->"462c709c-e9c8-412f-9f74-baad2da1542f"],
-Cell[17917, 406, 537, 11, 207, "Text",ExpressionUUID->"673b8231-d59a-45e7-b9fa-97ad94ab850b"],
-Cell[18457, 419, 1026, 19, 435, "Text",ExpressionUUID->"9c6aef83-bb09-47b1-831b-1b56920771bc"],
-Cell[19486, 440, 2183, 39, 587, "Text",ExpressionUUID->"dae0cf89-3222-489a-885e-d4d89e7b177e"],
-Cell[21672, 481, 1169, 19, 397, "Text",ExpressionUUID->"34ee2ba4-6212-492f-aaea-d41292a5e5f9"],
-Cell[22844, 502, 305, 7, 93, "Text",ExpressionUUID->"2545066a-dd23-4ce8-aed8-038395778dfc"]
+Cell[20338, 445, 209, 4, 74, "Subsubsection",ExpressionUUID->"f75ba4d5-195e-4565-97b5-17194326efe2"],
+Cell[20550, 451, 155, 3, 55, "Text",ExpressionUUID->"8dc71a72-70d3-47bb-9f36-5947ecf425d1"],
+Cell[20708, 456, 547, 10, 169, "Text",ExpressionUUID->"462c709c-e9c8-412f-9f74-baad2da1542f"],
+Cell[21258, 468, 537, 11, 207, "Text",ExpressionUUID->"673b8231-d59a-45e7-b9fa-97ad94ab850b"],
+Cell[21798, 481, 1026, 19, 435, "Text",ExpressionUUID->"9c6aef83-bb09-47b1-831b-1b56920771bc"],
+Cell[22827, 502, 2183, 39, 587, "Text",ExpressionUUID->"dae0cf89-3222-489a-885e-d4d89e7b177e"],
+Cell[25013, 543, 1169, 19, 397, "Text",ExpressionUUID->"34ee2ba4-6212-492f-aaea-d41292a5e5f9"],
+Cell[26185, 564, 305, 7, 93, "Text",ExpressionUUID->"2545066a-dd23-4ce8-aed8-038395778dfc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23186, 514, 173, 3, 74, "Subsubsection",ExpressionUUID->"91415cd6-e5e9-487e-b28c-72abff445cd6"],
-Cell[23362, 519, 216, 5, 55, "Text",ExpressionUUID->"a81ec4b7-873e-4215-a35a-91713b1984fe"],
-Cell[23581, 526, 191, 3, 55, "Text",ExpressionUUID->"9d8534d4-d0ad-41aa-ab48-9ecca2d48766"]
+Cell[26527, 576, 173, 3, 74, "Subsubsection",ExpressionUUID->"91415cd6-e5e9-487e-b28c-72abff445cd6"],
+Cell[26703, 581, 216, 5, 55, "Text",ExpressionUUID->"a81ec4b7-873e-4215-a35a-91713b1984fe"],
+Cell[26922, 588, 191, 3, 55, "Text",ExpressionUUID->"9d8534d4-d0ad-41aa-ab48-9ecca2d48766"]
 }, Open  ]],
-Cell[23787, 532, 164, 3, 74, "Subsubsection",ExpressionUUID->"dccd7d45-618a-449e-8690-773c8bf9eeda"],
-Cell[23954, 537, 164, 3, 53, "Subsubsection",ExpressionUUID->"4dc0f83a-4b57-4002-b33f-23a7376b81a1"],
+Cell[27128, 594, 164, 3, 74, "Subsubsection",ExpressionUUID->"dccd7d45-618a-449e-8690-773c8bf9eeda"],
+Cell[27295, 599, 164, 3, 53, "Subsubsection",ExpressionUUID->"4dc0f83a-4b57-4002-b33f-23a7376b81a1"],
 Cell[CellGroupData[{
-Cell[24143, 544, 164, 3, 53, "Subsubsection",ExpressionUUID->"08106c5b-3fde-4a3c-a284-4bca8924fcbc"],
-Cell[24310, 549, 891, 19, 435, "Text",ExpressionUUID->"860bb69b-a7ac-45a1-b254-91ea9219d7b2"]
+Cell[27484, 606, 164, 3, 53, "Subsubsection",ExpressionUUID->"08106c5b-3fde-4a3c-a284-4bca8924fcbc"],
+Cell[27651, 611, 891, 19, 435, "Text",ExpressionUUID->"860bb69b-a7ac-45a1-b254-91ea9219d7b2"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25250, 574, 173, 3, 65, "Subchapter",ExpressionUUID->"532d8f16-c304-44ae-bb46-a7a8698fb8b9"],
-Cell[25426, 579, 569, 9, 283, "Text",ExpressionUUID->"b6ef7c37-6945-46a5-858d-cd587e390bc1"]
+Cell[28591, 636, 173, 3, 65, "Subchapter",ExpressionUUID->"532d8f16-c304-44ae-bb46-a7a8698fb8b9"],
+Cell[28767, 641, 569, 9, 283, "Text",ExpressionUUID->"b6ef7c37-6945-46a5-858d-cd587e390bc1"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[26044, 594, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
+Cell[29385, 656, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"c112c942-91de-4421-92be-292614a70bbe",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[26191, 600, 198, 4, 123, "Section",ExpressionUUID->"f2f83710-2ec1-4833-9cf8-1e97bfec8838"],
-Cell[26392, 606, 376, 6, 131, "Text",ExpressionUUID->"04b093fe-020f-4f89-8c24-8aae78c61e26"],
+Cell[29532, 662, 198, 4, 123, "Section",ExpressionUUID->"f2f83710-2ec1-4833-9cf8-1e97bfec8838"],
+Cell[29733, 668, 376, 6, 131, "Text",ExpressionUUID->"04b093fe-020f-4f89-8c24-8aae78c61e26"],
 Cell[CellGroupData[{
-Cell[26793, 616, 1827, 50, 231, "Code",ExpressionUUID->"082ff537-3e5f-4942-9da3-997f12250f48"],
-Cell[28623, 668, 1747, 47, 342, "Output",ExpressionUUID->"9f48d0ed-0bb4-4728-8c62-7ead427eba57"]
+Cell[30134, 678, 1827, 50, 231, "Code",ExpressionUUID->"082ff537-3e5f-4942-9da3-997f12250f48"],
+Cell[31964, 730, 1747, 47, 342, "Output",ExpressionUUID->"9f48d0ed-0bb4-4728-8c62-7ead427eba57"]
 }, Open  ]],
-Cell[30385, 718, 807, 20, 135, "Code",ExpressionUUID->"b88569a1-7262-432f-950f-30475c4a6fb9"],
-Cell[31195, 740, 402, 8, 283, "Text",ExpressionUUID->"a37c3514-bd96-46c4-9b63-50436e0836a5"],
-Cell[31600, 750, 541835, 8888, 501, 282158, 4630, "CachedBoxData", "BoxData", "Input",ExpressionUUID->"366c8da3-6845-41c5-995c-3dd9e983bbd7"],
-Cell[573438, 9640, 249, 6, 70, "Code",ExpressionUUID->"70713b9d-f9c2-43a0-9774-c51c63a721e1"],
-Cell[573690, 9648, 171, 3, 70, "Code",ExpressionUUID->"59049776-2fbb-45eb-954d-af117f469cb6"],
-Cell[573864, 9653, 4339, 88, 1511, "Code",ExpressionUUID->"1f5c3333-8ed7-429a-954e-f3b8a7fb7e3b"]
+Cell[33726, 780, 807, 20, 135, "Code",ExpressionUUID->"b88569a1-7262-432f-950f-30475c4a6fb9"],
+Cell[34536, 802, 402, 8, 283, "Text",ExpressionUUID->"a37c3514-bd96-46c4-9b63-50436e0836a5"],
+Cell[34941, 812, 541835, 8888, 501, 282158, 4630, "CachedBoxData", "BoxData", "Input",ExpressionUUID->"366c8da3-6845-41c5-995c-3dd9e983bbd7"],
+Cell[576779, 9702, 249, 6, 70, "Code",ExpressionUUID->"70713b9d-f9c2-43a0-9774-c51c63a721e1"],
+Cell[577031, 9710, 171, 3, 70, "Code",ExpressionUUID->"59049776-2fbb-45eb-954d-af117f469cb6"],
+Cell[577205, 9715, 4339, 88, 1511, "Code",ExpressionUUID->"1f5c3333-8ed7-429a-954e-f3b8a7fb7e3b"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[578252, 9747, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
+Cell[581593, 9809, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"a31cbd5d-ee09-4893-8221-380976f44250",
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
-Cell[578399, 9753, 208, 4, 123, "Section",ExpressionUUID->"83d76012-ebcb-435a-9636-7ca02e5ca90e"],
-Cell[578610, 9759, 145, 2, 55, "Text",ExpressionUUID->"12ad87ef-49e4-4446-856f-fd6df2ef84ab"],
-Cell[578758, 9763, 1342, 41, 359, "Text",ExpressionUUID->"cc7fde7f-139c-4742-a554-0d86e46214fb"]
+Cell[581740, 9815, 208, 4, 123, "Section",ExpressionUUID->"83d76012-ebcb-435a-9636-7ca02e5ca90e"],
+Cell[581951, 9821, 145, 2, 55, "Text",ExpressionUUID->"12ad87ef-49e4-4446-856f-fd6df2ef84ab"],
+Cell[582099, 9825, 1342, 41, 359, "Text",ExpressionUUID->"cc7fde7f-139c-4742-a554-0d86e46214fb"]
 }, Open  ]],
-Cell[580115, 9807, 161, 3, 65, "Subchapter",ExpressionUUID->"4101154c-be6b-4516-8786-a6d8542d2a9f"],
-Cell[580279, 9812, 161, 3, 49, "Subchapter",ExpressionUUID->"4dff053c-c72e-4609-b049-1f138f7c2847"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[580477, 9820, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
- CellTags->"SlideShowHeader"],
-Cell[580602, 9824, 212, 4, 123, "Section",ExpressionUUID->"b926fb8f-c20f-4c7c-9b87-4c83d5af810c"]
+Cell[583456, 9869, 161, 3, 65, "Subchapter",ExpressionUUID->"4101154c-be6b-4516-8786-a6d8542d2a9f"],
+Cell[583620, 9874, 161, 3, 49, "Subchapter",ExpressionUUID->"4dff053c-c72e-4609-b049-1f138f7c2847"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[580851, 9833, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
+Cell[583818, 9882, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"ea66aa6b-9f10-4ea1-bfef-43c25a046390",
  CellTags->"SlideShowHeader"],
-Cell[580976, 9837, 218, 4, 123, "Section",ExpressionUUID->"bc477cb9-0c46-41dd-b691-edabe7ef4260"]
+Cell[583943, 9886, 212, 4, 123, "Section",ExpressionUUID->"b926fb8f-c20f-4c7c-9b87-4c83d5af810c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[581231, 9846, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
+Cell[584192, 9895, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"dd0c7ea7-e632-4869-9441-0699a0bacb64",
  CellTags->"SlideShowHeader"],
-Cell[581356, 9850, 206, 4, 123, "Section",ExpressionUUID->"a2248013-f2fd-4e26-86ed-443cf70f39bc"]
+Cell[584317, 9899, 218, 4, 123, "Section",ExpressionUUID->"bc477cb9-0c46-41dd-b691-edabe7ef4260"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[584572, 9908, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"3976365e-fade-4f6e-96a5-ed9dc6a243f5",
+ CellTags->"SlideShowHeader"],
+Cell[584697, 9912, 206, 4, 123, "Section",ExpressionUUID->"a2248013-f2fd-4e26-86ed-443cf70f39bc"]
 }, Open  ]]
 }
 ]
