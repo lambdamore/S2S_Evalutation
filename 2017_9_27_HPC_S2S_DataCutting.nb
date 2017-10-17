@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    102848,       2303]
-NotebookOptionsPosition[     98078,       2210]
-NotebookOutlinePosition[     99302,       2242]
-CellTagsIndexPosition[     99223,       2237]
+NotebookDataLength[    103388,       2317]
+NotebookOptionsPosition[     98523,       2223]
+NotebookOutlinePosition[     99747,       2255]
+CellTagsIndexPosition[     99668,       2250]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2202,9 +2202,22 @@ Cell[BoxData[
          "\"\<_grids.mx\>\""}], ",", "points"}], "]"}], ";", "\n", "  ", 
       "points"}]}], "]"}]}], ";"}]], "Code",
  CellChangeTimes->{{3.716754208314378*^9, 3.716754282614153*^9}, {
-  3.716754336079924*^9, 
-  3.716754405347341*^9}},ExpressionUUID->"578e0b75-6957-4881-9c8c-\
-57fcedc5d61e"]
+   3.716754336079924*^9, 3.716754405347341*^9}, {3.716819088345923*^9, 
+   3.716819113080937*^9}, 3.716819173005951*^9, {3.716819451785709*^9, 
+   3.716819480739317*^9}},ExpressionUUID->"578e0b75-6957-4881-9c8c-\
+57fcedc5d61e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Map", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"S2SGrids", "[", 
+      RowBox[{"polygon", ",", "#"}], "]"}], "&"}], ",", "models"}], "]"}], 
+  ";"}]], "Code",
+ CellChangeTimes->{{3.716819229449912*^9, 
+  3.716819239681712*^9}},ExpressionUUID->"ca6bdc64-2ade-4774-864e-\
+9c1b81f2cdc0"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -2236,7 +2249,7 @@ CellTagsIndex->{
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"SlideShowHeader", 98474, 2223}
+ {"SlideShowHeader", 98919, 2236}
  }
 *)
 (*NotebookFileOutline
@@ -2302,7 +2315,8 @@ Cell[89381, 1995, 122, 2, 74, "SlideShowNavigationBar",ExpressionUUID->"8af5a6be
  CellTags->"SlideShowHeader"],
 Cell[CellGroupData[{
 Cell[89528, 2001, 157, 3, 65, "Subchapter",ExpressionUUID->"8abfec00-f803-43d1-8b73-76ed2659aeb5"],
-Cell[89688, 2006, 8362, 200, 647, "Code",ExpressionUUID->"578e0b75-6957-4881-9c8c-57fcedc5d61e"]
+Cell[89688, 2006, 8482, 201, 647, "Code",ExpressionUUID->"578e0b75-6957-4881-9c8c-57fcedc5d61e"],
+Cell[98173, 2209, 322, 10, 70, "Code",ExpressionUUID->"ca6bdc64-2ade-4774-864e-9c1b81f2cdc0"]
 }, Open  ]]
 }, Open  ]]
 }
